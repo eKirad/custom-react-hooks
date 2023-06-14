@@ -1,0 +1,12 @@
+{
+    "name": "custom-fetch-all-reach-hook",
+    "version": "1.0.0",
+    "description": "",
+    "main": "lib/index.js",
+    "scripts": {
+      "build": "babel src --out-dir lib"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT"
+  }
