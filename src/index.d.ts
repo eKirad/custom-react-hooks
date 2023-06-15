@@ -1,5 +1,5 @@
 declare module 'use-fetch-all' {
-    const useDataApi: <T>(
+    const useFetchAll: <T>(
         endpointUrl: string,
         initialData?: T[]
     ) => [
@@ -14,5 +14,5 @@ declare module 'use-fetch-all' {
         }
     ]
 
-    export default useDataApi
+    export default useFetchAll
 }
