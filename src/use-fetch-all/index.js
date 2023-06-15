@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import DataService from './dataService'
+import DataService from '../service'
 
-export const useFetchAll = (initialData = [], endpointUrl) => {
+export const useFetchAll = (endpointUrl, initialData = []) => {
     const [data, setData] = useState(initialData)
     const [isLoading, setIsLoading] = useState(false)
     const [isError, setIsError] = useState(false)
