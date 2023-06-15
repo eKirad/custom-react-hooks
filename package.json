@@ -4,9 +4,15 @@
     "description": "",
     "main": "lib/index.js",
     "scripts": {
-      "build": "babel src --out-dir lib"
+        "build": "babel src --out-dir lib"
     },
     "keywords": [],
     "author": "",
-    "license": "MIT"
-  }
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/cli": "^7.22.5",
+        "@babel/core": "^7.22.5",
+        "@babel/node": "^7.22.5",
+        "@babel/preset-env": "^7.22.5"
+    }
+}
