@@ -1,31 +1,7 @@
 import { useEffect, useState } from 'react'
+import { EndpointUrl, QueryParams } from './types'
 
-enum SearchCriteriaEnum {
-    NOT_SELECTED = ``,
-}
-
-enum SortOrderEnum {
-    ASC = `asc`,
-    DESC = `desc`,
-}
-
-type QueryParams = {
-    limit: number
-    page: number
-    search: string
-    searchCriteria: SearchCriteriaEnum
-    sortField: string
-    sortOrder: SortOrderEnum
-    criteria: string
-}
-
-type EndpointUrl = {
-    queryParams: QueryParams
-    baseUrl: string
-    resourcePath: string
-}
-
-export const useFetchAll = (endpointUrl: EndpointUrl, initialData: any[] = []) => {
+export const useFetchAll = (endpointUrl: EndpointUrl, initialData: Array<any> = []) => {
     const [data, setData] = useState<any[]>(initialData)
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [isError, setIsError] = useState<boolean>(false)
