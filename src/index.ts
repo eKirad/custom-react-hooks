@@ -15,7 +15,7 @@ export const useFetchAll = <T>({ baseUrl, resourcePath, queryParams }: EndpointU
             try {
                 const { limit, page, search, criteria, sortField, sortOrder } = queryParams
                 const response = await fetch(`${baseUrl}/${resourcePath}?limit=${limit}&page=${page}&search=${search}&criteria=${criteria}&sort=${sortField}&order=${sortOrder}`)
-                const data = await response.json()
+                const { data } = await response.json()
 
                 setData(data)
             } catch (error) {
