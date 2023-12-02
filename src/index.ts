@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { EndpointUrl, QueryParams } from './types'
 
-export const useFetchAll = ({ baseUrl, resourcePath, queryParams }: EndpointUrl, initialData: Array<any> = []) => {
-    const [data, setData] = useState<any[]>(initialData)
+export const useFetchAll = <T>({ baseUrl, resourcePath, queryParams }: EndpointUrl, initialData: Array<T> = []) => {
+    const [data, setData] = useState<Array<T>>(initialData)
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [isError, setIsError] = useState<boolean>(false)
     const [queryParameters, setQueryParameters] = useState<QueryParams>(queryParams)
