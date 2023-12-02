@@ -33,5 +33,5 @@ export const useFetchAll = <T>({ baseUrl, resourcePath, queryParams }: EndpointU
     return [
         { data, isLoading, isError },
         { setQueryParameters, setShouldFetchData },
-    ]
+    ] as const
 }
