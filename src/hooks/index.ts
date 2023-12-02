@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { EndpointUrl, QueryParams } from '../types'
+import { buildQuery } from '../helpers/queryBuilder'
 
 export const useFetchAll = <T>({ baseUrl, resourcePath, queryParams }: EndpointUrl, initialData: Array<T> = []) => {
     const [data, setData] = useState<Array<T>>(initialData)
@@ -13,8 +14,9 @@ export const useFetchAll = <T>({ baseUrl, resourcePath, queryParams }: EndpointU
             setIsLoading(true)
             setIsError(false)
             try {
-                const { limit, page, search, criteria, sortField, sortOrder } = queryParams
-                const response = await fetch(`${baseUrl}/${resourcePath}?limit=${limit}&page=${page}&search=${search}&criteria=${criteria}&sort=${sortField}&order=${sortOrder}`)
+                const baseUri = `${baseUrl}/${resourcePath}`
+                const query = buildQuery(baseUri, queryParams)
+                const response = await fetch(`${baseUri}${query}`)
                 const { data } = await response.json()
 
                 setData(data)
