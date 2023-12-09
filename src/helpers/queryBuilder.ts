@@ -1,6 +1,6 @@
 import { QueryParams } from '../types'
 
-export const buildQuery = (queryParams: QueryParams): string => {
+export const buildQueryParamsString = (queryParams: QueryParams): string => {
     let queryParamsString = ``
 
     if (queryParams.limit) {
