@@ -1,1 +1,1 @@
-export { useFetchAll } from './hooks'
+export * from './hooks'
