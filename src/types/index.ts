@@ -1,4 +1,3 @@
-import { EndpointUrl } from './url'
-import { QueryParams } from './queryParams'
+import { QueryParams } from './queryParams/queryParams'
 
-export { QueryParams, EndpointUrl }
+export { QueryParams }

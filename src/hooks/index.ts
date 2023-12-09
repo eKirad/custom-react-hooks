@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import { EndpointUrl, QueryParams } from '../types'
-import { buildQuery } from '../helpers/queryBuilder'
+import { QueryParams } from '../types'
+import FetchDataService from '../service'
+import { defaultQueryParams } from '../types/queryParams/queryParams'
 
-export const useFetchAll = <T>({ baseUrl, resourcePath, queryParams }: EndpointUrl, initialData: Array<T> = []) => {
+export const useFetchAll = <T>(uri: string, queryParams: QueryParams = defaultQueryParams, initialData: Array<T> = []) => {
     const [data, setData] = useState<Array<T>>(initialData)
     const [isLoading, setIsLoading] = useState<boolean>(false)
     const [isError, setIsError] = useState<boolean>(false)
@@ -14,13 +15,8 @@ export const useFetchAll = <T>({ baseUrl, resourcePath, queryParams }: EndpointU
             setIsLoading(true)
             setIsError(false)
             try {
-                const uri = `${baseUrl}/${resourcePath}`
-                // TODO: Improve
-                // const query = buildQuery(baseUri, queryParams)
-                const response = await fetch(`${uri}`)
-                const { data } = await response.json()
-
-                setData(data)
+                const responseData = await FetchDataService.fetchAll(uri, queryParams)
+                setData(responseData)
             } catch (error) {
                 setIsError(true)
                 console.error(error)
