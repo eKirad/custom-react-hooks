@@ -14,9 +14,10 @@ export const useFetchAll = <T>({ baseUrl, resourcePath, queryParams }: EndpointU
             setIsLoading(true)
             setIsError(false)
             try {
-                const baseUri = `${baseUrl}/${resourcePath}`
-                const query = buildQuery(baseUri, queryParams)
-                const response = await fetch(`${baseUri}${query}`)
+                const uri = `${baseUrl}/${resourcePath}`
+                // TODO: Improve
+                // const query = buildQuery(baseUri, queryParams)
+                const response = await fetch(`${uri}`)
                 const { data } = await response.json()
 
                 setData(data)
