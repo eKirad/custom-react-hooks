@@ -11,8 +11,9 @@ export type QueryParams = {
     limit: number
     page: number
     search: string
-    searchCriteria: SearchCriteriaEnum
-    sortField: string
-    sortOrder: SortOrderEnum
-    criteria: string
+    // TODO: Fix
+    searchCriteria?: SearchCriteriaEnum
+    sortField?: string
+    sortOrder?: SortOrderEnum
+    criteria?: string
 }
