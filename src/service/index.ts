@@ -3,6 +3,7 @@ import { QueryParams } from '../types'
 
 interface FetchDataServiceInterface {
     fetchAll<T>(uri: string, queryParams: QueryParams): Promise<Array<T>>
+    fetchOne<T>(uri: string, id: string): Promise<T>
 }
 
 const FetchDataService: FetchDataServiceInterface = {
@@ -13,6 +14,13 @@ const FetchDataService: FetchDataServiceInterface = {
         const { data } = await response.json()
 
         return data as Array<T>
+    },
+    fetchOne: async <T>(uri: string, id: string): Promise<T> => {
+        const response = await fetch(`${uri}/${id}`)
+
+        const { data } = await response.json()
+
+        return data as T
     },
 }
 

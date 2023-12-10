@@ -1,3 +1,4 @@
 import { useFetchAll } from './useFetchAll'
+import { useFetchOne } from './useFetchOne'
 
-export { useFetchAll }
+export { useFetchAll, useFetchOne }
