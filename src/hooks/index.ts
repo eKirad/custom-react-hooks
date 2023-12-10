@@ -15,7 +15,7 @@ export const useFetchAll = <T>(uri: string, queryParams: QueryParams = defaultQu
             setIsLoading(true)
             setIsError(false)
             try {
-                const responseData = await FetchDataService.fetchAll(uri, queryParams)
+                const responseData = await FetchDataService.fetchAll<T>(uri, queryParams)
                 setData(responseData)
             } catch (error) {
                 setIsError(true)
