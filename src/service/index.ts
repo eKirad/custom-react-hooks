@@ -1,10 +1,5 @@
 import { buildQueryParamsString } from '../helpers/queryBuilder'
-import { QueryParams } from '../types'
-
-interface FetchDataServiceInterface {
-    fetchAll<T>(uri: string, queryParams: QueryParams): Promise<Array<T>>
-    fetchOne<T>(uri: string, id: string): Promise<T>
-}
+import { FetchDataServiceInterface, QueryParams } from '../types'
 
 const FetchDataService: FetchDataServiceInterface = {
     fetchAll: async <T>(uri: string, queryParams: QueryParams): Promise<Array<T>> => {
