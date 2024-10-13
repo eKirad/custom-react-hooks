@@ -1,5 +1,5 @@
 {
-    "name": "custom-fetch-all-reach-hook",
+    "name": "custom-react-hook-for-data-fetching",
     "version": "1.1.0",
     "description": "",
     "main2": "lib/index.js",
