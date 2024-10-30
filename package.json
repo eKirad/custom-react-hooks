@@ -1,6 +1,6 @@
 {
-    "name": "custom-react-hook-for-data-fetching",
-    "version": "1.2.0",
+    "name": "simple-custom-react-hooks",
+    "version": "1.3.0",
     "description": "",
     "main2": "lib/index.js",
     "main": "dist/cjs/index.js",
