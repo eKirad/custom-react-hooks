@@ -11,6 +11,7 @@ export const useEffectOnUpdateOnly = <T>({ dependencies, callback }: Args<T>) =>
     useEffect(() => {
         if (isInitialRender.current) {
             isInitialRender.current = false
+
             return
         }
 
