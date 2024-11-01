@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import FetchDataService from '../service'
+import FetchDataService from '../../service'
 
 export const useFetchOne = <T>(uri: string, id: string, initialData: T = {} as T) => {
     const [data, setData] = useState<T>(initialData)
