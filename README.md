@@ -7,3 +7,8 @@ One can install the hooks' collection as an NPM package as follows:
 ```
 npm install simple-custom-react-hooks
 ```
+
+## Usage
+
+## API
+
