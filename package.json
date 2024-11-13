@@ -9,7 +9,7 @@
         "dist"
     ],
     "scripts": {
-        "build2": "babel src --out-dir lib",
+        "build-babel": "babel src --out-dir lib",
         "build": "npm i && npm run clean && npm run build:esm && npm run build:cjs",
         "prettier": "prettier --write src/",
         "build:esm": "tsc",
