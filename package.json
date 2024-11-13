@@ -1,6 +1,6 @@
 {
     "name": "simple-custom-react-hooks",
-    "version": "1.3.9",
+    "version": "1.3.10",
     "description": "Simple, recurring custom react hooks that can be handy for every project.",
     "main": "dist/index.js",
     "module": "dist/index.js",
@@ -25,6 +25,11 @@
     "keywords": [],
     "author": "",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/eKirad/custom-react-hooks"
+    },
+    "homepage": "https://github.com/eKirad/custom-react-hooks",
     "devDependencies": {
         "@babel/cli": "7.22.5",
         "@babel/core": "7.22.5",
