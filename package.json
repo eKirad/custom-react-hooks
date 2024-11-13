@@ -1,6 +1,6 @@
 {
     "name": "simple-custom-react-hooks",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "description": "",
     "main2": "lib/index.js",
     "main": "dist/cjs/index.js",
