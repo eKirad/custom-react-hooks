@@ -1,16 +1,23 @@
 {
     "name": "simple-custom-react-hooks",
-    "version": "1.3.3",
+    "version": "1.3.7",
     "description": "",
     "main2": "lib/index.js",
-    "main": "dist/cjs/index.js",
-    "module": "dist/est/index.js",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "require": "./dist/index.js",
+            "import": "./dist/index.js"
+        }
+    },
     "files": [
         "dist"
     ],
     "scripts": {
         "build-babel": "babel src --out-dir lib",
-        "build": "npm i && npm run clean && npm run build:esm && npm run build:cjs",
+        "build": "npm i && npm run clean && npm run build:esm",
         "prettier": "prettier --write src/",
         "build:esm": "tsc",
         "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
