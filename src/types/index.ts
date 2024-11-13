@@ -1,4 +1,4 @@
 import { QueryParams } from './queryParams.types.'
-import { FetchDataServiceInterface } from './service'
+import { FetchDataServiceInterface } from './service.types.'
 
 export { QueryParams, FetchDataServiceInterface }

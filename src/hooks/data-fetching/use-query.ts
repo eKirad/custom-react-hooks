@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { UseQueryArgs } from '../../types/useQueryArgs'
+import { UseQueryArgs } from '../../types/useQueryArgs.types'
 
 export const useQuery = <T>({ initialData, queryKey, queryFn }: UseQueryArgs<T>) => {
     const [data, setData] = useState<T>(initialData)
