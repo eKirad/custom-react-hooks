@@ -10,12 +10,12 @@ npm install simple-custom-react-hooks
 
 ## Description
 
-### `useEffectOnUpdateOnly(...)`
+### 1. `useEffectOnUpdateOnly`
 
 
 ## Usage
 
-### `useEffectOnUpdateOnly(...)`
+### 1. `useEffectOnUpdateOnly`
 
 ```
 useEffectOnUpdateOnly({ callback: () => {
