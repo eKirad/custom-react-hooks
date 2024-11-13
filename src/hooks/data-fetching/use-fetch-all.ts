@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { QueryParams } from '../../types'
 import FetchDataService from '../../service'
-import { defaultQueryParams } from '../../types/queryParams/queryParams'
+import { defaultQueryParams } from '../../types/queryParams.types.'
 
 export const useFetchAll = <T>(uri: string, queryParams: QueryParams = defaultQueryParams, initialData: Array<T> = []) => {
     const [data, setData] = useState<Array<T>>(initialData)
