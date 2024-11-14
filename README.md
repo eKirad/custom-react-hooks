@@ -12,6 +12,8 @@ npm install simple-custom-react-hooks
 
 ### 1. `useEffectOnUpdateOnly`
 
+This custom hook covers the 'missing' case in the build-in `useEffect()` hook of running only if an update occurs. That is, `useEffect` with and empty dependency array would run only once after the initial render.
+Therefore, the `useEffectOnUpdateOnly` custom hook can be seen as the such that handles the "opposite" behaviour, namely, applying an effect only once an update (in any of the dependencies) occurs.
 
 ## Usage
 
