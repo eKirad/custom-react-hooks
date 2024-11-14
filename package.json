@@ -1,6 +1,6 @@
 {
     "name": "simple-custom-react-hooks",
-    "version": "1.3.18",
+    "version": "1.3.19",
     "description": "Simple, recurring custom react hooks that can be handy for every project.",
     "main": "dist/index.js",
     "module": "dist/index.js",
