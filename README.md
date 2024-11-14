@@ -24,7 +24,14 @@ useEffectOnUpdateOnly({ callback: () => {
    // Effect code goes here 
 }, dependencies: [] }) // Dependencies for the effect have to be added to the array here
 ```
+### 2. `useFetchAll`
 
+```
+const BASE_URL = `localhost:<PORT>`
+const RESOURCE_PATH = `foo`
+
+const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll<any>(`${BASE_URL}/${RESOURCE_PATH}`)
+```
 
 ## API
 
@@ -47,3 +54,12 @@ The array on which the effect depends.
 Type: `() => void`
 
 The effect/function executed after an update in the dependency array occurs.
+
+### 2. `useFetchAll`
+
+
+
+
+
+
+
