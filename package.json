@@ -1,6 +1,6 @@
 {
     "name": "simple-custom-react-hooks",
-    "version": "1.3.10",
+    "version": "1.3.15",
     "description": "Simple, recurring custom react hooks that can be handy for every project.",
     "main": "dist/index.js",
     "module": "dist/index.js",
@@ -15,11 +15,8 @@
         "dist"
     ],
     "scripts": {
-        "build-babel": "babel src --out-dir lib",
-        "build": "npm i && npm run clean && npm run build:esm",
+        "build": "npm i && npm run clean && tsc",
         "prettier": "prettier --write src/",
-        "build:esm": "tsc",
-        "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
         "clean": "rm -rf dist/"
     },
     "keywords": [],
@@ -27,7 +24,7 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/eKirad/custom-react-hooks"
+        "url": "git+https://github.com/eKirad/custom-react-hooks"
     },
     "homepage": "https://github.com/eKirad/custom-react-hooks",
     "devDependencies": {
