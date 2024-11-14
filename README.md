@@ -44,4 +44,6 @@ Type: `Array<T>`
 The array on which the effect depends.
 
 #### `objArg.callback`
+Type: `() => void`
+
 The effect/function executed after an update in the dependency array occurs.
