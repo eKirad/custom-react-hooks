@@ -19,7 +19,10 @@
         "prettier": "prettier --write src/",
         "clean": "rm -rf dist/"
     },
-    "keywords": [],
+    "keywords": [
+        "react",
+        "hooks"
+    ],
     "author": "",
     "license": "MIT",
     "repository": {
