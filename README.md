@@ -22,7 +22,7 @@ The `useEffectOnUpdateOnly` custom hook can be seen as a hook that handles the "
 ```
 useEffectOnUpdateOnly({ callback: () => {
    // Effect code goes here 
-}, dependencies: []}) // Dependencies for the effect have to be added to the array here
+}, dependencies: [] }) // Dependencies for the effect have to be added to the array here
 ```
 
 
