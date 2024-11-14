@@ -36,6 +36,7 @@ type Args<T> = {
     dependencies: Array<T>
     callback: () => void
 }
+```
 
 #### `objArg.dependencies`
 Type: `Array<T>`
