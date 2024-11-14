@@ -1,6 +1,6 @@
 {
     "name": "simple-custom-react-hooks",
-    "version": "1.3.16",
+    "version": "1.3.17",
     "description": "Simple, recurring custom react hooks that can be handy for every project.",
     "main": "dist/index.js",
     "module": "dist/index.js",
@@ -31,10 +31,6 @@
     },
     "homepage": "https://github.com/eKirad/custom-react-hooks",
     "devDependencies": {
-        "@babel/cli": "7.22.5",
-        "@babel/core": "7.22.5",
-        "@babel/node": "7.22.5",
-        "@babel/preset-env": "7.22.5",
         "@types/node": "20.10.4",
         "@types/react": "18.2.43",
         "@types/react-dom": "18.2.17",
