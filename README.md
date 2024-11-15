@@ -53,4 +53,5 @@ Type: `() => void`
 The effect/function executed after an update in the dependency array occurs.
 
 ## References
-- [^1]: MDN documentation about local storage - [Local Storage MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+
+ [^1]: MDN documentation about local storage - [Local Storage MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
