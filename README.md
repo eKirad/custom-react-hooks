@@ -42,14 +42,13 @@ type Args<T> = {
 ```
 
 #### `objArg.dependencies`
-
---
-
+---
 Type: `Array<T>`
 
 The array on which the effect depends.
 
 #### `objArg.callback`
+---
 Type: `() => void`
 
 The effect/function executed after an update in the dependency array occurs.
@@ -57,6 +56,7 @@ The effect/function executed after an update in the dependency array occurs.
 ### 2. `useLocalStorage`
 
 #### `key`
+---
 Type: `string`
 
 ## References
