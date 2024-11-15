@@ -52,10 +52,26 @@ const RESOURCE_PATH = `foo`
 const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll(BASE_URL}/${RESOURCE_PATH}`)
 ```
 
-## API
 
 <details>
-	<summary>1. <mark>useEffectOnUpdateOnly</mark></summary>
+  <summary>## Test</summary>
+
+  This is the content under the collapsible **Test** heading. It will be hidden until the user clicks on the heading.
+
+  - Bullet 1
+  - Bullet 2
+  - Bullet 3
+
+  You can also include **Markdown** elements like code blocks:
+
+  ```javascript
+  console.log("This is a code block inside the collapsible section");
+```
+<details>
+
+## API
+
+	<summary>1. useEffectOnUpdateOnly>
 
 	In the following `objArg: Args<T>` is used to describe the object that is passed to the hook.
 
