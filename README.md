@@ -17,7 +17,7 @@ The `useEffectOnUpdateOnly` custom hook can be seen as a hook that handles the "
 
 ### 2. `useLocalStorage`
 
-A custom hook that stores a state into the local storage.[^1]
+A custom hook that stores a state into the local storage[^1].
 
 ## Usage
 
@@ -52,6 +52,5 @@ Type: `() => void`
 
 The effect/function executed after an update in the dependency array occurs.
 
---
 ## References
 - [^1]: MDN documentation about local storage - [Local Storage MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
