@@ -33,7 +33,7 @@ A custom hook that performs an API fetch[^3] to retrieve a single resource avail
 
 ### 1. `useEffectOnUpdateOnly`
 
-```
+```js
 const someProp = `foo`
 
 useEffectOnUpdateOnly({ callback: () => {
@@ -43,7 +43,7 @@ useEffectOnUpdateOnly({ callback: () => {
 
 ### 2. `useLocalStorage`
 
-```
+```js
 const [localStorageValue, setLocalStorageValue] = useLocalStorage(`foo`)
 ...
 setLocalStorageValue(`bar`)
@@ -51,7 +51,7 @@ setLocalStorageValue(`bar`)
 
 ### 3. `useFetchAll`
 
-```
+```js
 const BASE_URL = `localhost:<PORT>`
 const RESOURCE_PATH = `foo`
 
@@ -59,7 +59,7 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 ```
 ### 4. `useFetchOne`
 
-```
+```js
 const BASE_URL = `localhost:<PORT>`
 const RESOURCE_PATH = `foo`
 const RESOURCE_ID = `123`
