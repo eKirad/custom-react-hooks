@@ -15,6 +15,10 @@ npm install simple-custom-react-hooks
 This custom hook covers the 'missing' case of the build-in `useEffect()` hook of running only if an update occurs. That is, `useEffect` with and empty dependency array would run only once (as an effect of) after the initial render.
 The `useEffectOnUpdateOnly` custom hook can be seen as a hook that handles the "opposite" behaviour, namely, applying an effect only once an update (in any of the defined dependencies) occurs.
 
+### 2. `useLocalStorage`
+
+A custom hook that stores a state into the local storage.[^1]
+
 ## Usage
 
 ### 1. `useEffectOnUpdateOnly`
@@ -47,3 +51,7 @@ The array on which the effect depends.
 Type: `() => void`
 
 The effect/function executed after an update in the dependency array occurs.
+
+--
+## References
+- [^1]: MDN documentation about local storage - [Local Storage MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
