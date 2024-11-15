@@ -54,7 +54,7 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 
 
 <details>
-  <summary>## Test</summary>
+  <summary><h2>Test</h2></summary>
 
   This is the content under the collapsible **Test** heading. It will be hidden until the user clicks on the heading.
 
