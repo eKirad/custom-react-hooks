@@ -55,8 +55,7 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 ## API
 
 <details>
-	<summary><h3>1. <mark>useEffectOnUpdateOnly</mark></h3></summary>
-
+	<summary>1. <mark>useEffectOnUpdateOnly</mark></summary>
 
 	In the following `objArg: Args<T>` is used to describe the object that is passed to the hook.
 
