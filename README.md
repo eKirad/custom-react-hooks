@@ -42,6 +42,7 @@ type Args<T> = {
 ```
 
 #### `objArg.dependencies`
+--
 Type: `Array<T>`
 
 The array on which the effect depends.
