@@ -52,21 +52,6 @@ const RESOURCE_PATH = `foo`
 const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll(BASE_URL}/${RESOURCE_PATH}`)
 ```
 
-
-<details>
-  <summary>useEffectOnUpdateOnly</summary>
-	In the following `objArg: Args<T>` is used to describe the object that is passed to the hook.
-
-  	```javascript
-	   type Args<T> = {
-	       dependencies: Array<T>
-	       callback: () => void
-	   }
-	```
-	
-	--- 
-<details>
-
 <details>
   <summary>Click me</summary>
   
@@ -85,11 +70,9 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 </details>
 
 
-
-
 ## API
 
-	<summary>1. useEffectOnUpdateOnly>
+	1. useEffectOnUpdateOnly>
 
 	In the following `objArg: Args<T>` is used to describe the object that is passed to the hook.
 
@@ -111,7 +94,6 @@ The array on which the effect depends.
 Type: `() => void`
 
 The effect/function executed after an update in the dependency array occurs.
-</details>
 
 
 
