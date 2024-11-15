@@ -117,7 +117,4 @@ Type: `Array<T>`
 
 Default value: []
 
-The identifier for the data that is going to be stored.
-
- [^1]: MDN documentation about local storage - [Local Storage MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
-```
+[^1]: MDN documentation about local storage - [Local Storage MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
