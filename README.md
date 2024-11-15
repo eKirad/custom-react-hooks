@@ -1,8 +1,10 @@
 # custom-react-hooks
+
 A collection of useful custom react hooks.
 
 ## Installation
-One can install the hooks' collection as an NPM package as follows: 
+
+One can install the hooks' collection as an NPM package as follows:
 
 ```
 npm install simple-custom-react-hooks
@@ -12,60 +14,135 @@ npm install simple-custom-react-hooks
 
 ### 1. `useEffectOnUpdateOnly`
 
-This custom hook covers the 'missing' case of the build-in `useEffect()` hook of running only if an update occurs. That is, `useEffect` with and empty dependency array would run only once (as an effect of) after the initial render.
+This custom hook covers the "missing" case of the build-in `useEffect()`[^1] hook of running only if an update occurs. That is, `useEffect` with and empty dependency array would run only once (as an effect of) after the initial render.
 The `useEffectOnUpdateOnly` custom hook can be seen as a hook that handles the "opposite" behaviour, namely, applying an effect only once an update (in any of the defined dependencies) occurs.
 
 ### 2. `useLocalStorage`
 
-A custom hook that stores a state into the local storage[^1].
+A custom hook that stores a state into the local storage[^2].
+
+### 3. `useFetchAll`
+
+A custom hook that performs an API fetch[^3] to retrive all the resources available at a given URL and persists the response in a local state.
+
+### 4. `useFetchOne`
+
+A custom hook that performs an API fetch[^3] to retrieve a single resource available at a given URL and persists the response in a local state. 
 
 ## Usage
 
 ### 1. `useEffectOnUpdateOnly`
 
 ```
+const someProp = `foo`
+
 useEffectOnUpdateOnly({ callback: () => {
-   // Effect code goes here 
-}, dependencies: [] }) // Dependencies for the effect have to be added to the array here
+   // Effect code goes here
+}, dependencies: [someProp] }) 
 ```
 
 ### 2. `useLocalStorage`
 
 ```
-const [localStorageValue, setLocalStorageValue] = useLocalStorage(`foo`) 
+const [localStorageValue, setLocalStorageValue] = useLocalStorage(`foo`)
 ...
 setLocalStorageValue(`bar`)
 ```
 
-## API
-
-### 1. `useEffectOnUpdateOnly`
-In the following `objArg: Args<T>` is used to describe the object that is passed to the hook.
+### 3. `useFetchAll`
 
 ```
-type Args<T> = {
+const BASE_URL = `localhost:<PORT>`
+const RESOURCE_PATH = `foo`
+
+const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll(BASE_URL}/${RESOURCE_PATH}`)
+```
+### 4. `useFetchOne`
+
+```
+const BASE_URL = `localhost:<PORT>`
+const RESOURCE_PATH = `foo`
+const RESOURCE_ID = `123`
+
+const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll(BASE_URL}/${RESOURCE_PATH}/${RESOURCE_ID}`)
+```
+
+<details>
+  <summary>API</summary>
+  
+  ### 1. useEffectOnUpdateOnly
+  
+  In the following `objArg: Args<T>` is used to describe the object that is passed to the hook.
+
+  ```js
+  type = Args<T> = {
     dependencies: Array<T>
     callback: () => void
-}
-```
+  }
+  ```
 
----
-#### `objArg.dependencies`
-Type: `Array<T>`
+  #### `objArg.dependencies`
+  Type: `Array<T>`
 
-The array on which the effect depends.
+  The array on which the effect depends.
 
----
-#### `objArg.callback`
-Type: `() => void`
+  #### `objArg.callback`
+  Type: `() => void`
 
-The effect/function executed after an update in the dependency array occurs.
+  The effect/function executed after an update in the dependency array occurs.
 
-### 2. `useLocalStorage`
----
-#### `key`
-Type: `string`
+  ### 2. `useLocalStorage`
+  
+  #### `key`
+  Type: `string`
 
-The identifier for the data that is going to be stored.
+  The identifier to which the value that is stored corresponds to.
 
- [^1]: MDN documentation about local storage - [Local Storage MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+  ### 3. `useFetchAll`
+
+  #### `uri`
+  Type: `string`
+
+  #### `queryParams`
+  Type: `QueryParams`
+
+  Default value: `{ limit: 100 }: QueryParams`
+
+  ```js
+    type QueryParams = {
+      limit: number
+      page?: number
+      sort?: Sort
+    }
+
+    type Sort = {
+      sortOrder: SortOrderEnum
+      sortField: string
+    }
+
+    enum SortOrderEnum {
+      asc = `ASC`,
+      DESC = `DESC`
+    }
+  ```
+
+  #### `initialData`
+  Type: `Array<T>`
+
+  Default value: `[]`
+
+  ### 4. `useFetchOne`
+
+  #### `uri`
+  Type: `string`
+
+  #### `id`
+  Type: `string`
+
+  #### `initialData`
+  Type: `object`
+</details>
+
+[^1]: React `useEffect` - [React use effect hook](https://react.dev/reference/react/useEffect)
+[^2]: MDN documentation about local storage - [Local Storage MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+[^3]: MDN fetch API - [Fetch API MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
