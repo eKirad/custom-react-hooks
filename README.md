@@ -23,7 +23,11 @@ A custom hook that stores a state into the local storage[^1].
 
 ### 3. `useFetchAll`
 
-A custom hook that performs an API fetch based on a given URL and persists the response in state.
+A custom hook that performs an API fetch to retrive all the resources available at a given URL and persists the response in a local state.
+
+### 4. `useFetchOne`
+
+A custom hook that performs an API fetch to retrieve a single resource available at a given URL and persists the response in a local state. 
 
 ## Usage
 
@@ -50,6 +54,16 @@ const BASE_URL = `localhost:<PORT>`
 const RESOURCE_PATH = `foo`
 
 const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll(BASE_URL}/${RESOURCE_PATH}`)
+
+```
+### 4. `useFetchOne`
+
+```
+const BASE_URL = `localhost:<PORT>`
+const RESOURCE_PATH = `foo`
+const RESOURCE_ID = `123`
+
+const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll(BASE_URL}/${RESOURCE_PATH}/${RESOURCE_ID}`)
 ```
 
 <details>
@@ -115,6 +129,17 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
   Type: `Array<T>`
 
   Default value: []
+
+  ### 4. `useFetchOne`
+
+  #### `uri`
+  Type: `string`
+
+  #### `id`
+  Type: `string`
+
+  #### `initialData`
+  Type: `object`
 </details>
 
 [^1]: MDN documentation about local storage - [Local Storage MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
