@@ -21,6 +21,10 @@ The `useEffectOnUpdateOnly` custom hook can be seen as a hook that handles the "
 
 A custom hook that stores a state into the local storage[^1].
 
+### 3. `useFetchAll`
+
+A custom hook that performs an API fetch based on a given URL and persists the response in state.
+
 ## Usage
 
 ### 1. `useEffectOnUpdateOnly`
@@ -45,7 +49,8 @@ setLocalStorageValue(`bar`)
 const BASE_URL = `localhost:<PORT>`
 const RESOURCE_PATH = `foo`
 
-const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll<any>(`${BASE_URL}/${RESOURCE_PATH}`)
+const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll(BASE_URL}/${RESOURCE_PATH}`)
+```
 
 ## API
 
@@ -77,6 +82,39 @@ The effect/function executed after an update in the dependency array occurs.
 ---
 #### `key`
 Type: `string`
+
+### 3. `useFetchAll`
+---
+#### `uri`
+Type: `string`
+---
+#### `queryParams`
+Type: `QueryParams`
+
+Default value: { limit: 100}: QueryParams
+
+```
+type QueryParams = {
+    limit: number
+    page?: number
+    sort?: Sort
+}
+
+type Sort = {
+    sortOrder: SortOrderEnum
+    sortField: string
+}
+
+enum SortOrderEnum {
+    asc = `ASC`,
+    DESC = `DESC`
+}
+```
+---
+#### `initialData`
+Type: `Array<T>`
+
+Default value: []
 
 The identifier for the data that is going to be stored.
 
