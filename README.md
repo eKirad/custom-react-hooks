@@ -55,7 +55,9 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 <details>
   <summary>API</summary>
   
-  ### useEffectOnUpdateOnly
+  ### 1. useEffectOnUpdateOnly
+  
+  In the following `objArg: Args<T>` is used to describe the object that is passed to the hook.
 
   ```js
   type = Args<T> = {
@@ -63,33 +65,22 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
     callback: () => void
   }
   ```
+
+  ### `objArg.dependencies`
+  Type: `Array<T>`
+
+  The array on which the effect depends.
+
+  #### `objArg.callback`
+  Type: `() => void`
+
+  The effect/function executed after an update in the dependency array occurs.
+
 </details>
 
 
 ## API
 
-	1. useEffectOnUpdateOnly>
-
-	In the following `objArg: Args<T>` is used to describe the object that is passed to the hook.
-
-	```
-	type Args<T> = {
-	    dependencies: Array<T>
-	    callback: () => void
-	}
-
-	```
----
-#### `objArg.dependencies`
-Type: `Array<T>`
-
-The array on which the effect depends.
-
----
-#### `objArg.callback`
-Type: `() => void`
-
-The effect/function executed after an update in the dependency array occurs.
 
 
 
