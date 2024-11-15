@@ -58,10 +58,10 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 	In the following `objArg: Args<T>` is used to describe the object that is passed to the hook.
 
   	```javascript
-	type Args<T> = {
-	    dependencies: Array<T>
-	    callback: () => void
-	}
+	   type Args<T> = {
+	       dependencies: Array<T>
+	       callback: () => void
+	   }
 	```
 	
 	--- 
