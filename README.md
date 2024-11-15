@@ -53,18 +53,14 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 ```
 
 <details>
-  <summary>Click me</summary>
+  <summary>API</summary>
   
-  ### Heading
-  1. Foo
-  2. Bar
-     * Baz
-     * Qux
+  ### useEffectOnUpdateOnly
 
-  ### Some Javascript
   ```js
-  function logSomething(something) {
-    console.log('Something', something);
+  type = Args<T> = {
+    dependencies: Array<T>
+    callback: () => void
   }
   ```
 </details>
