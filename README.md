@@ -29,7 +29,6 @@ useEffectOnUpdateOnly({ callback: () => {
 }, dependencies: [] }) // Dependencies for the effect have to be added to the array here
 ```
 
-
 ## API
 
 ### 1. `useEffectOnUpdateOnly`
@@ -51,6 +50,11 @@ The array on which the effect depends.
 Type: `() => void`
 
 The effect/function executed after an update in the dependency array occurs.
+
+### 2. `useLocalStorage`
+
+### `key`
+Type: `string`
 
 ## References
 
