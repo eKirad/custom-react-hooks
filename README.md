@@ -66,7 +66,6 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 	}
 
 	```
-</details>
 ---
 #### `objArg.dependencies`
 Type: `Array<T>`
@@ -78,6 +77,9 @@ The array on which the effect depends.
 Type: `() => void`
 
 The effect/function executed after an update in the dependency array occurs.
+</details>
+
+
 
 ### 2. `useLocalStorage`
 ---
