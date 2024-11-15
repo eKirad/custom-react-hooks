@@ -34,9 +34,11 @@ A custom hook that performs an API fetch[^3] to retrieve a single resource avail
 ### 1. `useEffectOnUpdateOnly`
 
 ```
+const someProp = `foo`
+
 useEffectOnUpdateOnly({ callback: () => {
    // Effect code goes here
-}, dependencies: [] }) // Dependencies for the effect have to be added to the array here
+}, dependencies: [someProp] }) // Dependencies for the effect have to be added to the array here
 ```
 
 ### 2. `useLocalStorage`
