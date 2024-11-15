@@ -55,12 +55,11 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 ## API
 
 <details>
-	<summary>### 1. `useEffectOnUpdateOnly`</summary>
+	<summary><h3>1. `useEffectOnUpdateOnly`</h3></summary>
 
 	In the following `objArg: Args<T>` is used to describe the object that is passed to the hook.
 
 	```
-
 	type Args<T> = {
 	    dependencies: Array<T>
 	    callback: () => void
