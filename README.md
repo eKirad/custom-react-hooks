@@ -53,7 +53,7 @@ The effect/function executed after an update in the dependency array occurs.
 
 ### 2. `useLocalStorage`
 
-### `key`
+#### `key`
 Type: `string`
 
 ## References
