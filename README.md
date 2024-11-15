@@ -87,6 +87,7 @@ Type: `string`
 ---
 #### `uri`
 Type: `string`
+
 ---
 #### `queryParams`
 Type: `QueryParams`
