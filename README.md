@@ -66,7 +66,7 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
   }
   ```
 
-  ### `objArg.dependencies`
+  #### `objArg.dependencies`
   Type: `Array<T>`
 
   The array on which the effect depends.
@@ -76,51 +76,47 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 
   The effect/function executed after an update in the dependency array occurs.
 
+  ### 2. `useLocalStorage`
+  
+  #### `key`
+  Type: `string`
+
+  The identifier to which the value that is stored corresponds to.
+
+  ### 3. `useFetchAll`
+
+  #### `uri`
+  Type: `string`
+
+  #### `queryParams`
+  Type: `QueryParams`
+
+  Default value: `{ limit: 100 }: QueryParams`
+
+  ```js
+    type QueryParams = {
+      limit: number
+      page?: number
+      sort?: Sort
+    }
+
+    type Sort = {
+      sortOrder: SortOrderEnum
+      sortField: string
+    }
+
+    enum SortOrderEnum {
+      asc = `ASC`,
+      DESC = `DESC`
+    }
+  ```
+
+  #### `initialData`
+  Type: `Array<T>`
+
+  Default value: []
 </details>
 
 
 ## API
-
-
-
-
-### 2. `useLocalStorage`
----
-#### `key`
-Type: `string`
-
-### 3. `useFetchAll`
----
-#### `uri`
-Type: `string`
-
----
-#### `queryParams`
-Type: `QueryParams`
-
-Default value: `{ limit: 100 }: QueryParams`
-
-```
-type QueryParams = {
-    limit: number
-    page?: number
-    sort?: Sort
-}
-
-type Sort = {
-    sortOrder: SortOrderEnum
-    sortField: string
-}
-
-enum SortOrderEnum {
-    asc = `ASC`,
-    DESC = `DESC`
-}
-```
----
-#### `initialData`
-Type: `Array<T>`
-
-Default value: []
-
 [^1]: MDN documentation about local storage - [Local Storage MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
