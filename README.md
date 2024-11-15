@@ -54,19 +54,17 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 
 
 <details>
-  <summary><h2>Test</h2></summary>
+  <summary>useEffectOnUpdateOnly</summary>
+	In the following `objArg: Args<T>` is used to describe the object that is passed to the hook.
 
-  This is the content under the collapsible **Test** heading. It will be hidden until the user clicks on the heading.
-
-  - Bullet 1
-  - Bullet 2
-  - Bullet 3
-
-  You can also include **Markdown** elements like code blocks:
-
-  ```javascript
-  console.log("This is a code block inside the collapsible section");
-```
+  	```javascript
+	type Args<T> = {
+	    dependencies: Array<T>
+	    callback: () => void
+	}
+	```
+	
+	--- 
 <details>
 
 ## API
