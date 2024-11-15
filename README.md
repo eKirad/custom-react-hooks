@@ -23,11 +23,11 @@ A custom hook that stores a state into the local storage[^2].
 
 ### 3. `useFetchAll`
 
-A custom hook that performs an API fetch to retrive all the resources available at a given URL and persists the response in a local state.
+A custom hook that performs an API fetch[^3] to retrive all the resources available at a given URL and persists the response in a local state.
 
 ### 4. `useFetchOne`
 
-A custom hook that performs an API fetch to retrieve a single resource available at a given URL and persists the response in a local state. 
+A custom hook that performs an API fetch[^3] to retrieve a single resource available at a given URL and persists the response in a local state. 
 
 ## Usage
 
@@ -144,3 +144,4 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 
 [^1]: React `useEffect` - [React use effect hook](https://react.dev/reference/react/useEffect)
 [^2]: MDN documentation about local storage - [Local Storage MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+[^3]: MDN fetch API - [Fetch API MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
