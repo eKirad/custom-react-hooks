@@ -92,7 +92,7 @@ Type: `string`
 #### `queryParams`
 Type: `QueryParams`
 
-Default value: { limit: 100}: QueryParams
+Default value: `{ limit: 100 }: QueryParams`
 
 ```
 type QueryParams = {
