@@ -60,6 +60,4 @@ Type: `string`
 
 The identifier for the data that is going to be stored.
 
-## References
-
  [^1]: MDN documentation about local storage - [Local Storage MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
