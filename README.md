@@ -67,7 +67,7 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 	}
 
 	```
-
+</details>
 ---
 #### `objArg.dependencies`
 Type: `Array<T>`
