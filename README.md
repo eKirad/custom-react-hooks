@@ -38,7 +38,7 @@ const someProp = `foo`
 
 useEffectOnUpdateOnly({ callback: () => {
    // Effect code goes here
-}, dependencies: [someProp] }) // Dependencies for the effect have to be added to the array here
+}, dependencies: [someProp] }) 
 ```
 
 ### 2. `useLocalStorage`
@@ -56,7 +56,6 @@ const BASE_URL = `localhost:<PORT>`
 const RESOURCE_PATH = `foo`
 
 const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll(BASE_URL}/${RESOURCE_PATH}`)
-
 ```
 ### 4. `useFetchOne`
 
