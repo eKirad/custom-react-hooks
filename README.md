@@ -129,7 +129,7 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
   #### `initialData`
   Type: `Array<T>`
 
-  Default value: []
+  Default value: `[]`
 
   ### 4. `useFetchOne`
 
