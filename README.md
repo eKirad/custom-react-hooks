@@ -29,6 +29,14 @@ useEffectOnUpdateOnly({ callback: () => {
 }, dependencies: [] }) // Dependencies for the effect have to be added to the array here
 ```
 
+### 2. `useLocalStorage`
+
+```
+const [localStorageValue, setLocalStorageValue] = useLocalStorage(`foo`) 
+...
+setLocalStorageValue(`bar`)
+```
+
 ## API
 
 ### 1. `useEffectOnUpdateOnly`
