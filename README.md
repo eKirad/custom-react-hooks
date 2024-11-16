@@ -78,7 +78,7 @@ Note: keep in mind that this is a sample usage. The body of the `queryFn` can co
 const URL = `localhost:<PORT>`
 const queryKey = `foo`
 
-const [{ data }] = useQuery({
+const [{ data, isLoading, isError }] = useQuery({
   initialData: [], 
   queryFn: async () => {
     const response = await fetch(`${URL}`)
