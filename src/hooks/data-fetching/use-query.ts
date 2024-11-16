@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react'
-import { UseQueryArgs } from '../../types'
 
-export const useQuery = <T>({ initialData, queryKey, queryFn }: UseQueryArgs<T>) => {
+export type UseQueryType<T> = {
+    initialData: T
+    queryKey: Array<string>
+    queryFn: () => Promise<T>
+}
+
+export const useQuery = <T>({ initialData, queryKey, queryFn }: UseQueryType<T>) => {
     const [data, setData] = useState<T>(initialData)
     const [isLoading, setIsLoading] = useState(false)
     const [isError, setIsError] = useState(false)
