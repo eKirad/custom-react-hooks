@@ -72,7 +72,7 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 ```
 
 ### 5. `useFetchQuery`
-Note: keep in mind that this is a sample usage. The body of the `queryFn` can contain different logic, e.g. one can make an API call using an external library of own choice such as `axios`.
+Note: keep in mind that this is a sample usage. The body of the `queryFn` can contain different logic, e.g. one can make an API call using an external library of own choice such as `axios`[^4].
 
 ```js
 const URL = `localhost:<PORT>`
@@ -169,3 +169,4 @@ const [{ data }] = useQuery({
 [^1]: React `useEffect` - [React use effect hook](https://react.dev/reference/react/useEffect)
 [^2]: MDN documentation about local storage - [Local Storage MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 [^3]: MDN fetch API - [Fetch API MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+[^4]: axios GitHub - [axios GitHub repository](https://github.com/axios/axios)
