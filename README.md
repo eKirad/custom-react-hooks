@@ -167,6 +167,16 @@ const [{ data, isLoading, isError }] = useQuery({
 
   ### 5. `useFetchQuery`
 
+  In the following objArg: Args<T> is used to describe the object that is passed to the hook.
+
+  ```js
+  type = Args<T> = {
+    initialData: Array<T>
+    queryKey: string
+    callback: () => Promise<T>
+  }
+  ```
+
   #### `argObj.initialData`
   Type: `Array<T>`
 
