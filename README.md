@@ -27,7 +27,11 @@ A custom hook that performs an API fetch[^3] to retrive all the resources availa
 
 ### 4. `useFetchOne`
 
-A custom hook that performs an API fetch[^3] to retrieve a single resource available at a given URL and persists the response in a local state. 
+A custom hook that performs an API fetch[^3] to retrieve a single resource available at a given URL and persists the response in a local state.
+
+### 5. `useFetchQuery`
+
+A custom React Query (TanStack Query) -like hook that executes and async function and persists the response in a local state. 
 
 ## Usage
 
@@ -65,6 +69,25 @@ const RESOURCE_PATH = `foo`
 const RESOURCE_ID = `123`
 
 const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll(BASE_URL}/${RESOURCE_PATH}/${RESOURCE_ID}`)
+```
+
+### 5. `useFetchQuery`
+Note: keep in mind that this is a sample usage. The body of the `queryFn` can contain different logic, e.g. one can make an API call using an external library of own choice such as `axios`[^4].
+
+```js
+const URL = `localhost:<PORT>`
+const queryKey = `foo`
+
+const [{ data, isLoading, isError }] = useQuery({
+  initialData: [], 
+  queryFn: async () => {
+    const response = await fetch(`${URL}`)
+    const responseData = await response.json()
+      
+    return responseData
+  }, 
+  queryKey: [queryKey]
+})
 ```
 
 <details>
@@ -141,8 +164,30 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 
   #### `initialData`
   Type: `object`
+
+  ### 5. `useFetchQuery`
+
+  In the following objArg: Args<T> is used to describe the object that is passed to the hook.
+
+  ```js
+  type = Args<T> = {
+    initialData: Array<T>
+    queryKey: string
+    callback: () => Promise<T>
+  }
+  ```
+
+  #### `argObj.initialData`
+  Type: `Array<T>`
+
+  #### `argObj.queryKey`
+  Type: `Array<string>`
+
+  #### `queryFn`
+  Type: `() => Promise<T>`
 </details>
 
 [^1]: React `useEffect` - [React use effect hook](https://react.dev/reference/react/useEffect)
 [^2]: MDN documentation about local storage - [Local Storage MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 [^3]: MDN fetch API - [Fetch API MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+[^4]: axios GitHub - [axios GitHub repository](https://github.com/axios/axios)
