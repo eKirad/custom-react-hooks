@@ -71,6 +71,25 @@ const RESOURCE_ID = `123`
 const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll(BASE_URL}/${RESOURCE_PATH}/${RESOURCE_ID}`)
 ```
 
+### 5. `useFetchQuery`
+Note: keep in mind that this is a sample usage. The body of the `queryFn` can contain different logic, e.g. one can make an API call using an external library of own choice such as `axios`.
+
+```js
+const URL = `localhost:<PORT>`
+const queryKey = `foo`
+
+const [{ data }] = useQuery({
+  initialData: [], 
+  queryFn: async () => {
+    const response = await fetch(`${URL}`)
+    const responseData = await response.json()
+      
+    return responseData
+  }, 
+  queryKey: [queryKey]
+})
+```
+
 <details>
   <summary>API</summary>
   
