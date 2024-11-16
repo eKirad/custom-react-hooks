@@ -164,6 +164,17 @@ const [{ data, isLoading, isError }] = useQuery({
 
   #### `initialData`
   Type: `object`
+
+  ### 5. `useFetchQuery`
+
+  #### `argObj.initialData`
+  Type: `Array<T>`
+
+  #### `argObj.queryKey`
+  Type: `Array<string>`
+
+  #### `queryFn`
+  Type: `() => Promise<T>`
 </details>
 
 [^1]: React `useEffect` - [React use effect hook](https://react.dev/reference/react/useEffect)
