@@ -27,7 +27,11 @@ A custom hook that performs an API fetch[^3] to retrive all the resources availa
 
 ### 4. `useFetchOne`
 
-A custom hook that performs an API fetch[^3] to retrieve a single resource available at a given URL and persists the response in a local state. 
+A custom hook that performs an API fetch[^3] to retrieve a single resource available at a given URL and persists the response in a local state.
+
+### 5. `useFetchQuery`
+
+A custom React Query (TanStack Query) -like hook that executes and async function and persists the response in a local state. 
 
 ## Usage
 
