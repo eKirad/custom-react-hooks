@@ -33,6 +33,11 @@ A custom hook that performs an API fetch[^3] to retrieve a single resource avail
 
 A custom React Query (TanStack Query) -like hook that executes and async function and persists the response in a local state. 
 
+### 6. `useClickOutside`
+
+A custom hook that detects a click that is performed outside of a certain component. This might come especially handy when dealing with drop-downs, when one would like to detect a user movement outside of the drop-down/select
+component and perform certain actions (e.g. auto-close an opened select component).
+
 ## Usage
 
 ### 1. `useEffectOnUpdateOnly`
@@ -88,6 +93,23 @@ const [{ data, isLoading, isError }] = useQuery({
   }, 
   queryKey: [queryKey]
 })
+```
+
+### 6. `useClickOutside`
+
+```js
+const ref = useClickOutside({ callback: handleClickOutside })
+...
+const handleClickOutside = () => {
+  // Outside click logic (e.g. close an opened select)
+}
+...
+return (
+  <select id="myDropdown" ref={ref}>
+    <option value="option1">Option 1</option>
+    <option value="option1">Option 1</option>
+  </select> 
+)
 ```
 
 <details>
