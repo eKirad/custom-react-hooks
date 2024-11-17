@@ -207,6 +207,19 @@ return (
 
   #### `queryFn`
   Type: `() => Promise<T>`
+
+  ### 5. `useClickOutside`
+
+  In the following objArg: Args is used to describe the object that is passed to the hook.
+
+  ```js
+  type = Args = {
+    callback: () => void
+  }
+  ```
+
+  #### `argObj.callback`
+  Type: `() => void`
 </details>
 
 [^1]: React `useEffect` - [React use effect hook](https://react.dev/reference/react/useEffect)
