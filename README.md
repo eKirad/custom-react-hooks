@@ -1,6 +1,6 @@
 # custom-react-hooks
 
-A collection of useful custom react hooks.
+A collection of useful custom react hooks for API data fetching, local storage usage, customized DOM manipulations, etc.
 
 ## Installation
 
