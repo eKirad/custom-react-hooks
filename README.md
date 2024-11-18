@@ -195,6 +195,11 @@ const [booleanValue, toggleBooleanValue] = useToggleBoolean(true)
 
   #### `queryFn`
   Type: `() => Promise<T>`
+
+  ### 6. `useToggleBoolean`
+
+  #### `initialValue`
+  Type: `boolean`
 </details>
 
 [^1]: React `useEffect` - [React use effect hook](https://react.dev/reference/react/useEffect)
