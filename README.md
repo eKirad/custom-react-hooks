@@ -1,6 +1,6 @@
 # custom-react-hooks
 
-A collection of useful custom react hooks.
+A collection of useful custom react hooks for API data fetching, local storage usage, customized DOM manipulations, etc.
 
 ## Installation
 
@@ -32,6 +32,10 @@ A custom hook that performs an API fetch[^3] to retrieve a single resource avail
 ### 5. `useFetchQuery`
 
 A custom React Query (TanStack Query) -like hook that executes and async function and persists the response in a local state. 
+
+### 6. `useToggleBoolean`
+
+A custom hook that toggles a boolean flag.
 
 ## Usage
 
@@ -88,6 +92,15 @@ const [{ data, isLoading, isError }] = useQuery({
   }, 
   queryKey: [queryKey]
 })
+```
+
+### 5. `useToggleBoolean`
+
+```js
+const [booleanValue, toggleBooleanValue] = useToggleBoolean(true)
+...
+// e.g. toggle the value once a click event occurs
+const handleClick = () => { toggleBooleanValue() }
 ```
 
 <details>
@@ -185,6 +198,11 @@ const [{ data, isLoading, isError }] = useQuery({
 
   #### `queryFn`
   Type: `() => Promise<T>`
+
+  ### 6. `useToggleBoolean`
+
+  #### `initialValue`
+  Type: `boolean`
 </details>
 
 [^1]: React `useEffect` - [React use effect hook](https://react.dev/reference/react/useEffect)
