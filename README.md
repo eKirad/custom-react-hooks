@@ -33,6 +33,10 @@ A custom hook that performs an API fetch[^3] to retrieve a single resource avail
 
 A custom React Query (TanStack Query) -like hook that executes and async function and persists the response in a local state. 
 
+### 6. `useToggleBoolean`
+
+A custom hook that toggles a boolean flag.
+
 ## Usage
 
 ### 1. `useEffectOnUpdateOnly`
@@ -88,6 +92,12 @@ const [{ data, isLoading, isError }] = useQuery({
   }, 
   queryKey: [queryKey]
 })
+```
+
+### 5. `useToggleBoolean`
+
+```js
+const [booleanValue, toggleBooleanValue] = useToggleBoolean(true)
 ```
 
 <details>
