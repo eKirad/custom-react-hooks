@@ -238,7 +238,7 @@ Type: `Array<string>`
 
 Type: `() => Promise<T>`
 
-### 5. `useClickOutside`
+### 6. `useClickOutside`
 
 In the following objArg: Args is used to describe the object that is passed to the hook.
 
