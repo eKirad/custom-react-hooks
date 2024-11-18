@@ -98,6 +98,9 @@ const [{ data, isLoading, isError }] = useQuery({
 
 ```js
 const [booleanValue, toggleBooleanValue] = useToggleBoolean(true)
+...
+// e.g. toggle the value once a click event occurs
+const handleClick = () => { toggleBooleanValue() }
 ```
 
 <details>
