@@ -314,6 +314,16 @@ Type: `number`
 #### `initialScrollPosition`
 
 Type: `number`
+
+### 11. `useDebounce`
+
+##### `value`
+
+Type: `string`
+
+#### `delay`
+
+Type: `number`
 </details>
 
 [^1]: React `useEffect` - [React use effect hook](https://react.dev/reference/react/useEffect)
