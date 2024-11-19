@@ -1,11 +1,12 @@
 import { useEffect, useRef } from 'react'
+import { HTMLRefType } from '../../types'
 
 type Args = {
     callback: () => void
 }
 
 export const useClickOutside = ({ callback }: Args) => {
-    const ref = useRef<HTMLElement | null>(null)
+    const ref = useRef<HTMLRefType | null>(null)
 
     useEffect(() => {
         const handleClick = (event: Event) => {
