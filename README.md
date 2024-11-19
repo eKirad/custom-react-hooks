@@ -179,7 +179,7 @@ const value = useDebounce(inputValue, 100)
 ```js
 const [count, setCount] = useState(0)
 ...
-const previousValue = usePreviousValue(count) // Would always the "previous" state 
+const previousValue = usePreviousValue(count) // Would always hold the "previous" state 
 ```
 <details>
   <summary>API</summary>
