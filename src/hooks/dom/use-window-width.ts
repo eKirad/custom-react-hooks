@@ -8,7 +8,7 @@ export const useWindowWidth = (initialWindowWidth: number = window.innerWidth) =
         window.addEventListener('resize', handleResize)
 
         return () => window.removeEventListener('resize', handleResize)
-    }, [windowWidth])
+    }, [])
 
     return windowWidth
 }

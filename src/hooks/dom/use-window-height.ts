@@ -8,7 +8,7 @@ export const useWindowHeight = (initialWindowHeight: number = window.innerHeight
         window.addEventListener('resize', handleResize)
 
         return () => window.removeEventListener('resize', handleResize)
-    }, [windowHeight])
+    }, [])
 
     return windowHeight
 }
