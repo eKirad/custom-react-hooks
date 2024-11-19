@@ -13,9 +13,9 @@ export const useClickOutside = ({ callback }: Args) => {
             if (isOutsideClick) callback()
         }
 
-        window.addEventListener('click', handleClick)
+        document.addEventListener('click', handleClick)
 
-        return () => window.removeEventListener('click', handleClick)
+        return () => document.removeEventListener('click', handleClick)
     }, [callback])
 
     return ref
