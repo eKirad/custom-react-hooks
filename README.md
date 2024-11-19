@@ -50,6 +50,10 @@ A custom hook that keeps track of the size of the DOM's window width.
 
 A custom hook that keeps track of the size of the DOM's window height.
 
+### 10. `useScrollPosition`
+
+A custom hook that keeps track of the scroll position. 
+
 ## Usage
 
 ### 1. `useEffectUpdate`
@@ -148,6 +152,12 @@ const windowWidth = useWindowWidth()
 
 ```js
 const windowHeight = useWindowHeight() 
+```
+
+### 10. `useScrollPosition`
+
+```js
+const scrollPosition= useScrollPosition() 
 ```
 <details>
   <summary>API</summary>
@@ -283,9 +293,15 @@ Type: `boolean`
 
 Type: `number`
 
-### 7. `useWindowHeight`
+### 9. `useWindowHeight`
 
 #### `initialWindowHeight`
+
+Type: `number`
+
+### 10. `useScrollPosition`
+
+#### `initialScrollPosition`
 
 Type: `number`
 </details>
