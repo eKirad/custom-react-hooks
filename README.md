@@ -57,7 +57,11 @@ A custom hook that keeps track of the scroll position.
 ### 11. `useDebounce`
 
 A custom hook that updates a state value after some user-specified amount of time has passed. This might be especially useful for input elements that are coupled with some search functionality.
- 
+
+### 12. `usePreviousValue`
+
+A custom hook that returns the previous value of a variable within a functional component (e.g. a local state) 
+
 ## Usage
 
 ### 1. `useEffectUpdate`
@@ -168,6 +172,14 @@ const scrollPosition= useScrollPosition()
 
 ```js
 const value = useDebounce(inputValue, 100) 
+```
+
+### 12. `usePreviousValue`
+
+```js
+const [count, setCount] = useState(0)
+...
+const previousValue = usePreviousValue(count) // Would always hold the "previous" state 
 ```
 <details>
   <summary>API</summary>
@@ -324,6 +336,13 @@ Type: `string`
 #### `delay`
 
 Type: `number`
+
+### 12. `usePreviousValue`
+
+##### `value`
+
+Type: `JSValueType = string | boolean | number`
+
 </details>
 
 [^1]: React `useEffect` - [React use effect hook](https://react.dev/reference/react/useEffect)
