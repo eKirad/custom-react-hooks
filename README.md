@@ -35,8 +35,8 @@ A custom React Query (TanStack Query) -like hook that executes and async functio
 
 ### 6. `useClickOutside`
 
-A custom hook that detects a click that is performed outside of a certain component. This might come especially handy when dealing with drop-downs, when one would like to detect a user movement outside of the drop-down/select
-component and perform certain actions (e.g. auto-close an opened select component).
+A custom hook that detects a click that is performed outside of an HTML element. This might be especially handy when dealing with select/drop-down elements, when one would like to detect a user movement outside of the 
+eleemnt and perform certain actions (e.g. auto-close an opened select).
 
 ### 7. `useToggleBoolean`
 
@@ -107,11 +107,11 @@ const [{ data, isLoading, isError }] = useQuery({
 ### 6. `useClickOutside`
 
 ```js
-const ref = useClickOutside({ callback: handleClickOutside })
-...
 const handleClickOutside = () => {
   // Outside click logic (e.g. close an opened select)
 }
+...
+const ref = useClickOutside({ callback: handleClickOutside })
 ...
 return (
   <select id="myDropdown" ref={ref}>
