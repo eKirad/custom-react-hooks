@@ -31,9 +31,14 @@ A custom hook that performs an API fetch[^3] to retrieve a single resource avail
 
 ### 5. `useFetchQuery`
 
-A custom React Query (TanStack Query) -like hook that executes and async function and persists the response in a local state. 
+A custom React Query (TanStack Query) -like hook that executes and async function and persists the response in a local state.
 
-### 6. `useToggleBoolean`
+### 6. `useClickOutside`
+
+A custom hook that detects a click that is performed outside of an HTML element. This might be especially handy when dealing with select/drop-down elements, when one would like to detect a user movement outside of the 
+eleemnt and perform certain actions (e.g. auto-close an opened select).
+
+### 7. `useToggleBoolean`
 
 A custom hook that toggles a boolean flag.
 
@@ -44,9 +49,12 @@ A custom hook that toggles a boolean flag.
 ```js
 const someProp = `foo`
 
-useEffectOnUpdateOnly({ callback: () => {
-   // Effect code goes here
-}, dependencies: [someProp] }) 
+useEffectOnUpdateOnly({
+    callback: () => {
+        // Effect code goes here
+    },
+    dependencies: [someProp],
+})
 ```
 
 ### 2. `useLocalStorage`
@@ -65,6 +73,7 @@ const RESOURCE_PATH = `foo`
 
 const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll(BASE_URL}/${RESOURCE_PATH}`)
 ```
+
 ### 4. `useFetchOne`
 
 ```js
@@ -76,6 +85,7 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 ```
 
 ### 5. `useFetchQuery`
+
 Note: keep in mind that this is a sample usage. The body of the `queryFn` can contain different logic, e.g. one can make an API call using an external library of own choice such as `axios`[^4].
 
 ```js
@@ -83,18 +93,35 @@ const URL = `localhost:<PORT>`
 const queryKey = `foo`
 
 const [{ data, isLoading, isError }] = useQuery({
-  initialData: [], 
-  queryFn: async () => {
-    const response = await fetch(`${URL}`)
-    const responseData = await response.json()
-      
-    return responseData
-  }, 
-  queryKey: [queryKey]
+    initialData: [],
+    queryFn: async () => {
+        const response = await fetch(`${URL}`)
+        const responseData = await response.json()
+
+        return responseData
+    },
+    queryKey: [queryKey],
 })
 ```
 
-### 5. `useToggleBoolean`
+### 6. `useClickOutside`
+
+```js
+const handleClickOutside = () => {
+  // Outside click logic (e.g. close an opened select)
+}
+...
+const ref = useClickOutside({ callback: handleClickOutside })
+...
+return (
+  <select id="myDropdown" ref={ref}>
+    <option value="option1">Option 1</option>
+    <option value="option1">Option 1</option>
+  </select>
+)
+```
+
+### 7. `useToggleBoolean`
 
 ```js
 const [booleanValue, toggleBooleanValue] = useToggleBoolean(true)
@@ -110,99 +137,127 @@ const handleClick = () => { toggleBooleanValue() }
   
   In the following `objArg: Args<T>` is used to describe the object that is passed to the hook.
 
-  ```js
-  type = Args<T> = {
-    dependencies: Array<T>
-    callback: () => void
+```js
+type = Args<T> = {
+  dependencies: Array<T>
+  callback: () => void
+}
+```
+
+#### `objArg.dependencies`
+
+Type: `Array<T>`
+
+The array on which the effect depends.
+
+#### `objArg.callback`
+
+Type: `() => void`
+
+The effect/function executed after an update in the dependency array occurs.
+
+### 2. `useLocalStorage`
+
+#### `key`
+
+Type: `string`
+
+The identifier to which the value that is stored corresponds to.
+
+### 3. `useFetchAll`
+
+#### `uri`
+
+Type: `string`
+
+#### `queryParams`
+
+Type: `QueryParams`
+
+Default value: `{ limit: 100 }: QueryParams`
+
+```js
+  type QueryParams = {
+    limit: number
+    page?: number
+    sort?: Sort
   }
-  ```
 
-  #### `objArg.dependencies`
-  Type: `Array<T>`
-
-  The array on which the effect depends.
-
-  #### `objArg.callback`
-  Type: `() => void`
-
-  The effect/function executed after an update in the dependency array occurs.
-
-  ### 2. `useLocalStorage`
-  
-  #### `key`
-  Type: `string`
-
-  The identifier to which the value that is stored corresponds to.
-
-  ### 3. `useFetchAll`
-
-  #### `uri`
-  Type: `string`
-
-  #### `queryParams`
-  Type: `QueryParams`
-
-  Default value: `{ limit: 100 }: QueryParams`
-
-  ```js
-    type QueryParams = {
-      limit: number
-      page?: number
-      sort?: Sort
-    }
-
-    type Sort = {
-      sortOrder: SortOrderEnum
-      sortField: string
-    }
-
-    enum SortOrderEnum {
-      asc = `ASC`,
-      DESC = `DESC`
-    }
-  ```
-
-  #### `initialData`
-  Type: `Array<T>`
-
-  Default value: `[]`
-
-  ### 4. `useFetchOne`
-
-  #### `uri`
-  Type: `string`
-
-  #### `id`
-  Type: `string`
-
-  #### `initialData`
-  Type: `object`
-
-  ### 5. `useFetchQuery`
-
-  In the following objArg: Args<T> is used to describe the object that is passed to the hook.
-
-  ```js
-  type = Args<T> = {
-    initialData: Array<T>
-    queryKey: string
-    callback: () => Promise<T>
+  type Sort = {
+    sortOrder: SortOrderEnum
+    sortField: string
   }
-  ```
 
-  #### `argObj.initialData`
-  Type: `Array<T>`
+  enum SortOrderEnum {
+    asc = `ASC`,
+    DESC = `DESC`
+  }
+```
 
-  #### `argObj.queryKey`
-  Type: `Array<string>`
+#### `initialData`
 
-  #### `queryFn`
-  Type: `() => Promise<T>`
+Type: `Array<T>`
 
-  ### 6. `useToggleBoolean`
+Default value: `[]`
 
-  #### `initialValue`
-  Type: `boolean`
+### 4. `useFetchOne`
+
+#### `uri`
+
+Type: `string`
+
+#### `id`
+
+Type: `string`
+
+#### `initialData`
+
+Type: `object`
+
+### 5. `useFetchQuery`
+
+In the following objArg: Args<T> is used to describe the object that is passed to the hook.
+
+```js
+type = Args<T> = {
+  initialData: Array<T>
+  queryKey: string
+  callback: () => Promise<T>
+}
+```
+
+#### `argObj.initialData`
+
+Type: `Array<T>`
+
+#### `argObj.queryKey`
+
+Type: `Array<string>`
+
+#### `queryFn`
+
+Type: `() => Promise<T>`
+
+### 6. `useClickOutside`
+
+In the following objArg: Args is used to describe the object that is passed to the hook.
+
+```js
+type = Args = {
+  callback: () => void
+}
+```
+
+#### `argObj.callback`
+
+# Type: `() => void`
+
+### 7. `useToggleBoolean`
+
+#### `initialValue`
+
+Type: `boolean`
+
 </details>
 
 [^1]: React `useEffect` - [React use effect hook](https://react.dev/reference/react/useEffect)

@@ -1,4 +1,5 @@
+import { HTMLRefType } from './htmlRef.type'
 import { QueryParams } from './queryParams.types.'
 import { FetchDataServiceInterface } from './service.types.'
 
-export { QueryParams, FetchDataServiceInterface }
+export { QueryParams, FetchDataServiceInterface, HTMLRefType }
