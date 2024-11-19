@@ -5,7 +5,7 @@ type Args<T> = {
     callback: () => void
 }
 
-export const useEffectOnUpdateOnly = <T>({ dependencies, callback }: Args<T>) => {
+export const useEffectUpdate = <T>({ dependencies, callback }: Args<T>) => {
     const isInitialRender = useRef(true)
 
     useEffect(() => {

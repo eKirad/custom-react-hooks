@@ -12,10 +12,10 @@ npm install simple-custom-react-hooks
 
 ## Description
 
-### 1. `useEffectOnUpdateOnly`
+### 1. `useEffectUpdate`
 
 This custom hook covers the "missing" case of the build-in `useEffect()`[^1] hook of running only if an update occurs. That is, `useEffect` with and empty dependency array would run only once (as an effect of) after the initial render.
-The `useEffectOnUpdateOnly` custom hook can be seen as a hook that handles the "opposite" behaviour, namely, applying an effect only once an update (in any of the defined dependencies) occurs.
+The `useEffectUpdate` custom hook can be seen as a hook that handles the "opposite" behaviour, namely, applying an effect only once an update (in any of the defined dependencies) occurs.
 
 ### 2. `useLocalStorage`
 
@@ -35,7 +35,7 @@ A custom React Query (TanStack Query) -like hook that executes and async functio
 
 ### 6. `useClickOutside`
 
-A custom hook that detects a click that is performed outside of an HTML element. This might be especially handy when dealing with select/drop-down elements, when one would like to detect a user movement outside of the 
+A custom hook that detects a click that is performed outside of an HTML element. This might be especially handy when dealing with select/drop-down elements, when one would like to detect a user movement outside of the
 eleemnt and perform certain actions (e.g. auto-close an opened select).
 
 ### 7. `useToggleBoolean`
@@ -44,12 +44,12 @@ A custom hook that toggles a boolean flag.
 
 ## Usage
 
-### 1. `useEffectOnUpdateOnly`
+### 1. `useEffectUpdate`
 
 ```js
 const someProp = `foo`
 
-useEffectOnUpdateOnly({
+useEffectUpdate({
     callback: () => {
         // Effect code goes here
     },
@@ -133,7 +133,7 @@ const handleClick = () => { toggleBooleanValue() }
 <details>
   <summary>API</summary>
   
-  ### 1. useEffectOnUpdateOnly
+  ### 1. useEffectUpdate
   
   In the following `objArg: Args<T>` is used to describe the object that is passed to the hook.
 
