@@ -42,6 +42,14 @@ eleemnt and perform certain actions (e.g. auto-close an opened select).
 
 A custom hook that toggles a boolean flag.
 
+### 8. `useWindowWidth`
+
+A custom hook that keeps track of the size of the DOM's window width.
+
+### 9. `useWindowHeight`
+
+A custom hook that keeps track of the size of the DOM's window height.
+
 ## Usage
 
 ### 1. `useEffectUpdate`
@@ -130,6 +138,17 @@ const [booleanValue, toggleBooleanValue] = useToggleBoolean(true)
 const handleClick = () => { toggleBooleanValue() }
 ```
 
+### 8. `useWindowWidth`
+
+```js
+const windowWidth = useWindowWidth() 
+```
+
+### 9. `useWindowHeight`
+
+```js
+const windowHeight = useWindowHeight() 
+```
 <details>
   <summary>API</summary>
   
@@ -258,6 +277,17 @@ type = Args = {
 
 Type: `boolean`
 
+### 8. `useWindowWidth`
+
+#### `initialWindowWidth`
+
+Type: `number`
+
+### 7. `useWindowHeight`
+
+#### `initialWindowHeight`
+
+Type: `number`
 </details>
 
 [^1]: React `useEffect` - [React use effect hook](https://react.dev/reference/react/useEffect)
