@@ -269,7 +269,7 @@ type = Args = {
 
 #### `argObj.callback`
 
-# Type: `() => void`
+Type: `() => void`
 
 ### 7. `useToggleBoolean`
 
