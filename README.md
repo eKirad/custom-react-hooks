@@ -54,6 +54,10 @@ A custom hook that keeps track of the size of the DOM's window height.
 
 A custom hook that keeps track of the scroll position. 
 
+### 11. `useDebounce`
+
+A custom hook that updates a state value after some user-specified amount of time has passed. This might be especially useful for input elements that are coupled with some search functionality.
+ 
 ## Usage
 
 ### 1. `useEffectUpdate`
@@ -158,6 +162,12 @@ const windowHeight = useWindowHeight()
 
 ```js
 const scrollPosition= useScrollPosition() 
+```
+
+### 11. `useDebounce`
+
+```js
+const value = useDebounce(inputValue, 100) 
 ```
 <details>
   <summary>API</summary>
