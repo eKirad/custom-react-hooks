@@ -1,4 +1,4 @@
-import { useScrollPosition } from './dom/use-scroll'
+import { useScrollPosition } from './dom/use-scroll-position'
 import { useEffectUpdate } from './custom-use-effects/use-effect-update'
 import { useClickOutside } from './dom/use-click-outside'
 import { useToggleBoolean } from './misc/use-toggle-boolean'
