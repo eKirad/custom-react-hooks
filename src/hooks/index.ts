@@ -1,3 +1,4 @@
+import { useScrollPosition } from './dom/use-scroll'
 import { useEffectUpdate } from './custom-use-effects/use-effect-update'
 import { useClickOutside } from './dom/use-click-outside'
 import { useToggleBoolean } from './misc/use-toggle-boolean'
@@ -6,4 +7,4 @@ import { useQuery } from './data-fetching/use-query'
 import { useFetchAll } from './data-fetching/use-fetch-all'
 import { useFetchOne } from './data-fetching/use-fetch-one'
 
-export { useFetchAll, useFetchOne, useQuery, useEffectUpdate, useLocalStorage, useToggleBoolean, useClickOutside }
+export { useFetchAll, useFetchOne, useQuery, useEffectUpdate, useLocalStorage, useToggleBoolean, useClickOutside, useScrollPosition }
