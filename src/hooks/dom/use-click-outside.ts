@@ -9,7 +9,7 @@ export const useClickOutside = ({ callback }: Args) => {
 
     useEffect(() => {
         const handleClick = (event: Event) => {
-            const isNotWithinRef = !ref.current?.contains(event.target as Node)
+            const isNotWithinRef = !ref?.current?.contains(event.target as Node)
             if (isNotWithinRef) callback()
         }
 
