@@ -256,7 +256,7 @@ Type: `object`
 
 ### 5. `useFetchQuery`
 
-In the following objArg: Args<T> is used to describe the object argument passed to the hook.
+In the following *objArg* is used to describe the object argument passed to the hook.
 
 #### *objArg.initialData*
 
@@ -273,7 +273,7 @@ Type: `() => Promise<T>`
 
 ### 6. `useClickOutside`
 
-In the following objArg: Args is used to describe the object that is passed to the hook.
+In the following *objArg* is used to describe the object that is passed to the hook.
 
 #### *objArg.callback*
 
