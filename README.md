@@ -14,9 +14,8 @@ npm install simple-custom-react-hooks
 
 ### 1. `useEffectUpdate`
 
-This custom hook covers the "missing" case of the build-in `useEffect()`[^1] hook of running only if an update occurs. That is, `useEffect` with and empty dependency array would run only once (as an effect of) after the initial render.
-The `useEffectUpdate` custom hook can be seen as a hook that handles the "opposite" behaviour, namely, applying an effect only once an update (in any of the defined dependencies) occurs.
-
+This custom hook covers the "missing" case of the build-in `useEffect()`[^1] hook of running only if an update occurs.
+ 
 ### 2. `useLocalStorage`
 
 A custom hook that stores a state into the local storage[^2].
