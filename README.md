@@ -87,8 +87,8 @@ setLocalStorageValue(`bar`)
 ### 3. `useFetchAll`
 
 ```js
-const BASE_URL = `localhost:<PORT>`
-const RESOURCE_PATH = `foo`
+const BASE_URL = `foo`
+const RESOURCE_PATH = `bar`
 
 const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll(BASE_URL}/${RESOURCE_PATH}`)
 ```
@@ -96,8 +96,8 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 ### 4. `useFetchOne`
 
 ```js
-const BASE_URL = `localhost:<PORT>`
-const RESOURCE_PATH = `foo`
+const BASE_URL = `foo`
+const RESOURCE_PATH = `bar`
 const RESOURCE_ID = `123`
 
 const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll(BASE_URL}/${RESOURCE_PATH}/${RESOURCE_ID}`)
@@ -108,8 +108,8 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 Note: keep in mind that this is a sample usage. The body of the `queryFn` can contain different logic, e.g. one can make an API call using an external library of own choice such as `axios`[^4].
 
 ```js
-const URL = `localhost:<PORT>`
-const queryKey = `foo`
+const URL = `foo`
+const queryKey = `bar`
 
 const [{ data, isLoading, isError }] = useQuery({
     initialData: [],
