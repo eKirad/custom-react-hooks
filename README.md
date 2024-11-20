@@ -127,7 +127,7 @@ const [{ data, isLoading, isError }] = useQuery({
 
 ```js
 // Handles "outside" click logic (e.g. close an opened select)
-const handleClickOutside = () => { }
+const handleClickOutside = () => { ... }
 ...
 const ref = useClickOutside({ callback: handleClickOutside })
 ...
