@@ -195,7 +195,6 @@ Type: `Array<T>`
 #### *objArg.callback*
 
 Type: `() => void`
-***
 
 ### 2. `useLocalStorage`
 
@@ -203,7 +202,6 @@ Type: `() => void`
 #### *key*
 
 Type: `string`
-***
 
 ### 3. `useFetchAll`
 
@@ -243,7 +241,6 @@ Default value: `{ limit: 100 }: QueryParams`
 Type: `Array<T>`
 
 Default value: `[]`
-***
 
 ### 4. `useFetchOne`
 
@@ -261,7 +258,6 @@ Type: `string`
 #### *initialData*
 
 Type: `object`
-***
 
 ### 5. `useFetchQuery`
 
@@ -281,7 +277,6 @@ Type: `Array<string>`
 #### *queryFn*
 
 Type: `() => Promise<T>`
-***
 
 ### 6. `useClickOutside`
 
@@ -291,7 +286,6 @@ In the following objArg: Args is used to describe the object that is passed to t
 #### *objArg.callback*
 
 Type: `() => void`
-***
 
 ### 7. `useToggleBoolean`
 
@@ -299,7 +293,6 @@ Type: `() => void`
 #### *initialValue*
 
 Type: `boolean`
-***
 
 ### 8. `useWindowWidth`
 
@@ -307,7 +300,6 @@ Type: `boolean`
 #### *initialWindowWidth*
 
 Type: `number`
-***
 
 ### 9. `useWindowHeight`
 
@@ -315,7 +307,6 @@ Type: `number`
 #### *initialWindowHeight*
 
 Type: `number`
-***
 
 ### 10. `useScrollPosition`
 
@@ -323,7 +314,6 @@ Type: `number`
 #### *initialScrollPosition*
 
 Type: `number`
-***
 
 ### 11. `useDebounce`
 
@@ -336,7 +326,6 @@ Type: `string`
 #### *delay*
 
 Type: `number`
-***
 
 ### 12. `usePreviousValue`
 
