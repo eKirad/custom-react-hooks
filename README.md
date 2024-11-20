@@ -14,9 +14,8 @@ npm install simple-custom-react-hooks
 
 ### 1. `useEffectUpdate`
 
-This custom hook covers the "missing" case of the build-in `useEffect()`[^1] hook of running only if an update occurs. That is, `useEffect` with and empty dependency array would run only once (as an effect of) after the initial render.
-The `useEffectUpdate` custom hook can be seen as a hook that handles the "opposite" behaviour, namely, applying an effect only once an update (in any of the defined dependencies) occurs.
-
+This custom hook covers the "missing" case of the build-in `useEffect()`[^1] hook of running only if an update occurs.
+ 
 ### 2. `useLocalStorage`
 
 A custom hook that stores a state into the local storage[^2].
@@ -88,8 +87,8 @@ setLocalStorageValue(`bar`)
 ### 3. `useFetchAll`
 
 ```js
-const BASE_URL = `localhost:<PORT>`
-const RESOURCE_PATH = `foo`
+const BASE_URL = `foo`
+const RESOURCE_PATH = `bar`
 
 const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll(BASE_URL}/${RESOURCE_PATH}`)
 ```
@@ -97,8 +96,8 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 ### 4. `useFetchOne`
 
 ```js
-const BASE_URL = `localhost:<PORT>`
-const RESOURCE_PATH = `foo`
+const BASE_URL = `foo`
+const RESOURCE_PATH = `bar`
 const RESOURCE_ID = `123`
 
 const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = useFetchAll(BASE_URL}/${RESOURCE_PATH}/${RESOURCE_ID}`)
@@ -109,8 +108,8 @@ const [{ data, isError, isLoading }, { setQueryParameters, shouldFetchData }] = 
 Note: keep in mind that this is a sample usage. The body of the `queryFn` can contain different logic, e.g. one can make an API call using an external library of own choice such as `axios`[^4].
 
 ```js
-const URL = `localhost:<PORT>`
-const queryKey = `foo`
+const URL = `foo`
+const queryKey = `bar`
 
 const [{ data, isLoading, isError }] = useQuery({
     initialData: [],
@@ -127,9 +126,8 @@ const [{ data, isLoading, isError }] = useQuery({
 ### 6. `useClickOutside`
 
 ```js
-const handleClickOutside = () => {
-  // Outside click logic (e.g. close an opened select)
-}
+// Handles "outside" click logic (e.g. close an opened select)
+const handleClickOutside = () => { ... }
 ...
 const ref = useClickOutside({ callback: handleClickOutside })
 ...
@@ -165,7 +163,7 @@ const windowHeight = useWindowHeight()
 ### 10. `useScrollPosition`
 
 ```js
-const scrollPosition= useScrollPosition() 
+const scrollPosition = useScrollPosition() 
 ```
 
 ### 11. `useDebounce`
@@ -179,49 +177,38 @@ const value = useDebounce(inputValue, 100)
 ```js
 const [count, setCount] = useState(0)
 ...
-const previousValue = usePreviousValue(count) // Would always hold the "previous" state 
+const previousValue = usePreviousValue(count) // Holds the "previous" state 
 ```
 <details>
   <summary>API</summary>
   
   ### 1. useEffectUpdate
   
-  In the following `objArg: Args<T>` is used to describe the object that is passed to the hook.
+  In the following `objArg: Args<T>` is used to describe the object argument that is passed to the hook.
 
-```js
-type = Args<T> = {
-  dependencies: Array<T>
-  callback: () => void
-}
-```
-
-#### `objArg.dependencies`
+#### *objArg.dependencies*
 
 Type: `Array<T>`
 
-The array on which the effect depends.
-
-#### `objArg.callback`
+#### *objArg.callback*
 
 Type: `() => void`
-
-The effect/function executed after an update in the dependency array occurs.
+***
 
 ### 2. `useLocalStorage`
 
-#### `key`
+#### *key*
 
 Type: `string`
-
-The identifier to which the value that is stored corresponds to.
+***
 
 ### 3. `useFetchAll`
 
-#### `uri`
+#### *uri*
 
 Type: `string`
 
-#### `queryParams`
+#### *queryParams*
 
 Type: `QueryParams`
 
@@ -245,101 +232,96 @@ Default value: `{ limit: 100 }: QueryParams`
   }
 ```
 
-#### `initialData`
+#### *initialData*
 
 Type: `Array<T>`
 
 Default value: `[]`
+***
 
 ### 4. `useFetchOne`
 
-#### `uri`
+#### *uri*
 
 Type: `string`
 
-#### `id`
+#### *id*
 
 Type: `string`
 
-#### `initialData`
+#### *initialData*
 
 Type: `object`
+***
 
 ### 5. `useFetchQuery`
 
-In the following objArg: Args<T> is used to describe the object that is passed to the hook.
+In the following *objArg* is used to describe the object argument passed to the hook.
 
-```js
-type = Args<T> = {
-  initialData: Array<T>
-  queryKey: string
-  callback: () => Promise<T>
-}
-```
-
-#### `argObj.initialData`
+#### *objArg.initialData*
 
 Type: `Array<T>`
 
-#### `argObj.queryKey`
+#### *objArg.queryKey*
 
 Type: `Array<string>`
 
-#### `queryFn`
+#### *queryFn*
 
 Type: `() => Promise<T>`
+***
 
 ### 6. `useClickOutside`
 
-In the following objArg: Args is used to describe the object that is passed to the hook.
+In the following *objArg* is used to describe the object that is passed to the hook.
 
-```js
-type = Args = {
-  callback: () => void
-}
-```
-
-#### `argObj.callback`
+#### *objArg.callback*
 
 Type: `() => void`
+***
 
 ### 7. `useToggleBoolean`
 
-#### `initialValue`
+#### *initialValue*
 
 Type: `boolean`
+***
 
 ### 8. `useWindowWidth`
 
-#### `initialWindowWidth`
+#### *initialWindowWidth*
 
 Type: `number`
+***
 
 ### 9. `useWindowHeight`
 
-#### `initialWindowHeight`
+#### *initialWindowHeight*
 
 Type: `number`
+***
 
 ### 10. `useScrollPosition`
 
-#### `initialScrollPosition`
+#### *initialScrollPosition*
 
 Type: `number`
+***
 
 ### 11. `useDebounce`
 
-##### `value`
+##### *value*
 
 Type: `string`
 
-#### `delay`
+#### *delay*
 
 Type: `number`
+***
 
 ### 12. `usePreviousValue`
 
-##### `value`
+##### *value*
 
 Type: `JSValueType = string | boolean | number`
 
