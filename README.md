@@ -186,11 +186,11 @@ const previousValue = usePreviousValue(count) // Holds the "previous" state
   
   In the following `objArg: Args<T>` is used to describe the object argument that is passed to the hook.
 
----
+***
 #### *objArg.dependencies*
 
 Type: `Array<T>`
----
+***
 
 #### *objArg.callback*
 
