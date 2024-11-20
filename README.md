@@ -163,7 +163,7 @@ const windowHeight = useWindowHeight()
 ### 10. `useScrollPosition`
 
 ```js
-const scrollPosition= useScrollPosition() 
+const scrollPosition = useScrollPosition() 
 ```
 
 ### 11. `useDebounce`
