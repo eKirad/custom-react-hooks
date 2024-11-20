@@ -192,7 +192,7 @@ Type: `Array<T>`
 
 #### *objArg.callback*
 
-Type: *() => void*
+Type: `() => void`
 
 ### 2. `useLocalStorage`
 
