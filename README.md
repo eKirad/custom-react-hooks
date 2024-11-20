@@ -184,16 +184,9 @@ const previousValue = usePreviousValue(count) // Holds the "previous" state
   
   ### 1. useEffectUpdate
   
-  In the following `objArg: Args<T>` is used to describe the object that is passed to the hook.
+  In the following `objArg: Args<T>` is used to describe the object argument that is passed to the hook.
 
-```js
-type = Args<T> = {
-  dependencies: Array<T>
-  callback: () => void
-}
-```
-
-#### `objArg.dependencies`
+#### *objArg.dependencies*
 
 Type: `Array<T>`
 
