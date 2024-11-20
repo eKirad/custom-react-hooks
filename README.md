@@ -195,18 +195,23 @@ Type: `Array<T>`
 #### *objArg.callback*
 
 Type: `() => void`
+***
 
 ### 2. `useLocalStorage`
 
+***
 #### *key*
 
 Type: `string`
+***
 
 ### 3. `useFetchAll`
 
+***
 #### *uri*
 
 Type: `string`
+***
 
 #### *queryParams*
 
@@ -231,90 +236,115 @@ Default value: `{ limit: 100 }: QueryParams`
     DESC = `DESC`
   }
 ```
+***
 
 #### *initialData*
 
 Type: `Array<T>`
 
 Default value: `[]`
+***
 
 ### 4. `useFetchOne`
 
+***
 #### *uri*
 
 Type: `string`
+***
 
 #### *id*
 
 Type: `string`
+***
 
 #### *initialData*
 
 Type: `object`
+***
 
 ### 5. `useFetchQuery`
 
 In the following objArg: Args<T> is used to describe the object argument passed to the hook.
 
+***
 #### *objArg.initialData*
 
 Type: `Array<T>`
+***
 
 #### *objArg.queryKey*
 
 Type: `Array<string>`
+***
 
 #### *queryFn*
 
 Type: `() => Promise<T>`
+***
 
 ### 6. `useClickOutside`
 
 In the following objArg: Args is used to describe the object that is passed to the hook.
 
+***
 #### *objArg.callback*
 
 Type: `() => void`
+***
 
 ### 7. `useToggleBoolean`
 
+***
 #### *initialValue*
 
 Type: `boolean`
+***
 
 ### 8. `useWindowWidth`
 
+***
 #### *initialWindowWidth*
 
 Type: `number`
+***
 
 ### 9. `useWindowHeight`
 
+***
 #### *initialWindowHeight*
 
 Type: `number`
+***
 
 ### 10. `useScrollPosition`
 
+***
 #### *initialScrollPosition*
 
 Type: `number`
+***
 
 ### 11. `useDebounce`
 
+***
 ##### *value*
 
 Type: `string`
+***
 
 #### *delay*
 
 Type: `number`
+***
 
 ### 12. `usePreviousValue`
 
+***
 ##### *value*
 
 Type: `JSValueType = string | boolean | number`
+***
 
 </details>
 
