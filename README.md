@@ -190,29 +190,23 @@ const previousValue = usePreviousValue(count) // Holds the "previous" state
 
 Type: `Array<T>`
 
-The array on which the effect depends.
+#### *objArg.callback*
 
-#### `objArg.callback`
-
-Type: `() => void`
-
-The effect/function executed after an update in the dependency array occurs.
+Type: *() => void*
 
 ### 2. `useLocalStorage`
 
-#### `key`
+#### *key*
 
 Type: `string`
-
-The identifier to which the value that is stored corresponds to.
 
 ### 3. `useFetchAll`
 
-#### `uri`
+#### *uri*
 
 Type: `string`
 
-#### `queryParams`
+#### *queryParams*
 
 Type: `QueryParams`
 
@@ -236,7 +230,7 @@ Default value: `{ limit: 100 }: QueryParams`
   }
 ```
 
-#### `initialData`
+#### *initialData*
 
 Type: `Array<T>`
 
@@ -244,39 +238,31 @@ Default value: `[]`
 
 ### 4. `useFetchOne`
 
-#### `uri`
+#### *uri*
 
 Type: `string`
 
-#### `id`
+#### *id*
 
 Type: `string`
 
-#### `initialData`
+#### *initialData*
 
 Type: `object`
 
 ### 5. `useFetchQuery`
 
-In the following objArg: Args<T> is used to describe the object that is passed to the hook.
+In the following objArg: Args<T> is used to describe the object argument passed to the hook.
 
-```js
-type = Args<T> = {
-  initialData: Array<T>
-  queryKey: string
-  callback: () => Promise<T>
-}
-```
-
-#### `argObj.initialData`
+#### *objArg.initialData*
 
 Type: `Array<T>`
 
-#### `argObj.queryKey`
+#### *objArg.queryKey*
 
 Type: `Array<string>`
 
-#### `queryFn`
+#### *queryFn*
 
 Type: `() => Promise<T>`
 
@@ -284,53 +270,47 @@ Type: `() => Promise<T>`
 
 In the following objArg: Args is used to describe the object that is passed to the hook.
 
-```js
-type = Args = {
-  callback: () => void
-}
-```
-
-#### `argObj.callback`
+#### *objArg.callback*
 
 Type: `() => void`
 
 ### 7. `useToggleBoolean`
 
-#### `initialValue`
+#### *initialValue*
 
 Type: `boolean`
 
 ### 8. `useWindowWidth`
 
-#### `initialWindowWidth`
+#### *initialWindowWidth*
 
 Type: `number`
 
 ### 9. `useWindowHeight`
 
-#### `initialWindowHeight`
+#### *initialWindowHeight*
 
 Type: `number`
 
 ### 10. `useScrollPosition`
 
-#### `initialScrollPosition`
+#### *initialScrollPosition*
 
 Type: `number`
 
 ### 11. `useDebounce`
 
-##### `value`
+##### *value*
 
 Type: `string`
 
-#### `delay`
+#### *delay*
 
 Type: `number`
 
 ### 12. `usePreviousValue`
 
-##### `value`
+##### *value*
 
 Type: `JSValueType = string | boolean | number`
 
