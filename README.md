@@ -61,6 +61,10 @@ A custom hook that updates a state value after some user-specified amount of tim
 
 A custom hook that returns the previous value of a variable within a functional component (e.g. a local state) 
 
+### 13. `useInputFocus`
+
+A custom hook that returns a ref for an HTML input element as well as a function to focus the input field. 
+
 ## Usage
 
 ### 1. `useEffectUpdate`
@@ -179,6 +183,27 @@ const [count, setCount] = useState(0)
 ...
 const previousValue = usePreviousValue(count) // Holds the "previous" state 
 ```
+
+### 13. `useInputFocus`
+
+```js
+const { inputRef, focusInput } = useInputFocus()
+
+const handleClick = () => {
+  ...
+  focusInput()
+}
+
+...
+
+return (
+  <>
+    <button onClick={handleClick}>Click</button>
+    <input ref={inputRef} placeholder="Search"/>
+  </>
+)
+```
+
 <details>
   <summary>API</summary>
   
@@ -324,6 +349,8 @@ Type: `number`
 ##### *value*
 
 Type: `JSValueType = string | boolean | number`
+
+### 13. `useInputFocus`
 
 </details>
 
