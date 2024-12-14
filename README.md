@@ -69,6 +69,10 @@ A custom hook that returns a ref for an HTML input element as well as a function
 
 A custom hook that keeps track of the current pointer position on the screen.
 
+### 15. `useIsOnline`
+
+A custom hook checks whether a user is online by subscribing to the global `online` (and `offline`) event(s). 
+
 ## Usage
 
 ### 1. `useEffectUpdate`
@@ -212,6 +216,12 @@ return (
 
 ```js
 const pointerPosition = usePointerPosition() 
+```
+
+### 15. `useIsOnline`
+
+```js
+const isOnline = useIsOnline() 
 ```
 
 <details>
@@ -359,14 +369,23 @@ Type: `number`
 ##### *value*
 
 Type: `JSValueType = string | boolean | number`
+***
 
 ### 13. `useInputFocus`
+***
 
 ### 14. `usePointerPosition`
 
 #### *initialPointerPosition*
 
 Type: `{ positionX: number, positionY: number }`
+***
+
+### 15. `useIsOnline`
+
+#### *initialValue*
+
+Type: boolean 
 ***
 
 </details>
