@@ -1,5 +1,4 @@
 import { useFormInput } from './dom/use-form-input'
-import { isOnline } from './misc/use-is-online'
 import { usePointer } from './dom/use-pointer'
 import { useInputFocus } from './dom/use-input-focus'
 import { usePreviousValue } from './misc/use-previous-value'
@@ -11,6 +10,7 @@ import { useLocalStorage } from './misc/use-local-storage'
 import { useQuery } from './data-fetching/use-query'
 import { useFetchAll } from './data-fetching/use-fetch-all'
 import { useFetchOne } from './data-fetching/use-fetch-one'
+import { useOnlineStatus } from './misc/use-online-status'
 
 export {
     useFetchAll,
@@ -24,6 +24,6 @@ export {
     usePreviousValue,
     useInputFocus,
     usePointer,
-    isOnline,
+    useOnlineStatus,
     useFormInput,
 }
