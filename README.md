@@ -362,6 +362,13 @@ Type: `JSValueType = string | boolean | number`
 
 ### 13. `useInputFocus`
 
+### 14. `usePointerPosition`
+
+#### *initialPointerPosition*
+
+Type: `{ positionX: number, positionY: number }`
+***
+
 </details>
 
 [^1]: React `useEffect` - [React use effect hook](https://react.dev/reference/react/useEffect)
