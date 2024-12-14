@@ -1,3 +1,4 @@
+import { useFormInput } from './dom/use-form-input'
 import { isOnline } from './misc/use-is-online'
 import { usePointer } from './dom/use-pointer'
 import { useInputFocus } from './dom/use-input-focus'
@@ -24,4 +25,5 @@ export {
     useInputFocus,
     usePointer,
     isOnline,
+    useFormInput,
 }
