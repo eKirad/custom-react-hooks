@@ -73,6 +73,10 @@ A custom hook that keeps track of the current pointer position on the screen.
 
 A custom hook checks whether a user is online by subscribing to the global `online` (and `offline`) event(s). 
 
+### 16. `useFormInput`
+
+A custom hook that handles form input fields' logic. 
+
 ## Usage
 
 ### 1. `useEffectUpdate`
@@ -222,6 +226,12 @@ const pointerPosition = usePointerPosition()
 
 ```js
 const isOnline = useOnlineStatus() 
+```
+
+### 16. `useFormInput`
+
+```js
+const { formField, onChange }= useFormInput() 
 ```
 
 <details>
@@ -386,6 +396,13 @@ Type: `{ positionX: number, positionY: number }`
 #### *initialValue*
 
 Type: boolean 
+***
+
+### 16. `useFormInput`
+
+#### *initialFormFieldValue*
+
+Type: String
 ***
 
 </details>
