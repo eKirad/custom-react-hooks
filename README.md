@@ -65,6 +65,10 @@ A custom hook that returns the previous value of a variable within a functional 
 
 A custom hook that returns a ref for an HTML input element as well as a function to focus the input field. 
 
+### 14. `usePointer`
+
+A custom hook that keeps track of the current pointer position on the screen.
+
 ## Usage
 
 ### 1. `useEffectUpdate`
@@ -202,6 +206,12 @@ return (
     <input ref={inputRef} placeholder="Search"/>
   </>
 )
+```
+
+### 14. `usePointer`
+
+```js
+const pointerPosition = usePointerPosition() 
 ```
 
 <details>
@@ -351,6 +361,13 @@ Type: `number`
 Type: `JSValueType = string | boolean | number`
 
 ### 13. `useInputFocus`
+
+### 14. `usePointerPosition`
+
+#### *initialPointerPosition*
+
+Type: `{ positionX: number, positionY: number }`
+***
 
 </details>
 
