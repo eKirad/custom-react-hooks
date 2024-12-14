@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export const isOnline = (initialValue: boolean = true) => {
+export const useOnlineStatus = (initialValue: boolean = true) => {
     const [isOnline, setIsOnline] = useState(initialValue)
 
     useEffect(() => {
