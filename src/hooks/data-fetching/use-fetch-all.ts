@@ -11,6 +11,7 @@ export const useFetchAll = <T>(uri: string, queryParams: QueryParams = defaultQu
     const [shouldFetchData, setShouldFetchData] = useState(false)
 
     useEffect(() => {
+        let ignoreFetch = false
         const fetchDataAll = async () => {
             setIsLoading(true)
             setIsError(false)
@@ -27,6 +28,10 @@ export const useFetchAll = <T>(uri: string, queryParams: QueryParams = defaultQu
         }
 
         fetchDataAll()
+
+        return () => {
+            ignoreFetch = true
+        }
     }, [queryParameters, shouldFetchData])
 
     return [

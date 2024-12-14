@@ -8,6 +8,7 @@ export const useFetchOne = <T>(uri: string, id: string, initialData: T = {} as T
     const [shouldFetchData, setShouldFetchData] = useState(false)
 
     useEffect(() => {
+        let ignoreFetch = false
         const fetchDataOne = async () => {
             setIsLoading(true)
             setIsError(false)
@@ -24,6 +25,10 @@ export const useFetchOne = <T>(uri: string, id: string, initialData: T = {} as T
         }
 
         fetchDataOne()
+
+        return () => {
+            ignoreFetch = true
+        }
     }, [shouldFetchData])
 
     return [{ data, isLoading, isError }, { setShouldFetchData }] as const
