@@ -1,3 +1,4 @@
+import { useOnlineStatusExternalSync } from './misc/use-onlin-status-external-sync'
 import { useFormInput } from './dom/use-form-input'
 import { usePointer } from './dom/use-pointer'
 import { useInputFocus } from './dom/use-input-focus'
@@ -26,4 +27,5 @@ export {
     usePointer,
     useOnlineStatus,
     useFormInput,
+    useOnlineStatusExternalSync,
 }
