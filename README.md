@@ -77,6 +77,10 @@ A custom hook checks whether a user is online by subscribing to the global `onli
 
 A custom hook that handles form input fields' logic. 
 
+### 17. `useOnlineStatusExternalStore`
+
+A custom hook checks whether a user is online by subscribing to the global `online` (and `offline`) event(s) with the help of the build-in react `useExternalStore` hook. 
+
 ## Usage
 
 ### 1. `useEffectUpdate`
@@ -231,7 +235,13 @@ const isOnline = useOnlineStatus()
 ### 16. `useFormInput`
 
 ```js
-const { formField, onChange }= useFormInput() 
+const { formField, onChange } = useFormInput() 
+```
+
+### 17. `useOnlineStatusExternalStore`
+
+```js
+const isOnline = useOnlineStatusExternalStore() 
 ```
 
 <details>
@@ -404,6 +414,8 @@ Type: boolean
 
 Type: String
 ***
+
+### 17. `useOnlineStatusExternalStore`
 
 </details>
 

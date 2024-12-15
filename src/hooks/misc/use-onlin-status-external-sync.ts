@@ -10,7 +10,7 @@ const subscribe = (callback: () => void) => {
     }
 }
 
-export const useOnlineStatusExternalSync = () =>
+export const useOnlineStatusExternalStore = () =>
     useSyncExternalStore(
         subscribe,
         () => navigator.onLine,
