@@ -12,6 +12,8 @@ export const useQuery = <T>({ initialData, queryKey, queryFn }: UseQueryType<T>)
     const [isError, setIsError] = useState(false)
 
     useEffect(() => {
+        let ignoreFetch = false
+
         const fetchData = async () => {
             setIsLoading(true)
             try {
@@ -27,6 +29,10 @@ export const useQuery = <T>({ initialData, queryKey, queryFn }: UseQueryType<T>)
         }
 
         fetchData()
+
+        return () => {
+            ignoreFetch = true
+        }
     }, [...queryKey])
 
     return [{ data, isLoading, isError }]
