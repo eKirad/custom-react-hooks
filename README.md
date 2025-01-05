@@ -81,6 +81,10 @@ A custom hook that handles form input fields' logic.
 
 A custom hook checks whether a user is online by subscribing to the global `online` (and `offline`) event(s) with the help of the build-in react `useExternalStore` hook. 
 
+### 18. `useAsyncEffect`
+
+A generic custom hook based on the built-in useEffect function that accepts and executes an async function.
+
 ## Usage
 
 ### 1. `useEffectUpdate`
@@ -242,6 +246,17 @@ const { formField, onChange } = useFormInput()
 
 ```js
 const isOnline = useOnlineStatusExternalStore() 
+```
+
+### 18. `useAsyncEffect`
+
+```js
+const { result, isLoading, error } = useAsyncEffect(() => {
+  return new Promise((resolve, reject) => {
+    const isResolved = false
+    setTimeout(() => isResolved ? resolve("resolve") : reject("Error"), 1000)
+  }
+}) 
 ```
 
 <details>
@@ -416,6 +431,17 @@ Type: String
 ***
 
 ### 17. `useOnlineStatusExternalStore`
+
+### 18. `useAsyncEffect`
+
+#### *asyncFn*
+
+Type: () => Promise<T>
+
+#### *dependencies*
+
+Type: Array<number | string>
+***
 
 </details>
 
